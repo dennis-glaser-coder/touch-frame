@@ -11,7 +11,8 @@
 <meta property="og:site_name" content="Touch-Frame">
 <meta property="og:title" content="Touch-Frame · Make any display touch.">
 <meta property="og:description" content="Aus LED-Wänden, Projektionen und Displays werden interaktive Touch-Flächen.">
-<meta name="theme-color" content="#0a0813">\n<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<meta name="theme-color" content="#0a0813">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -111,6 +112,21 @@ border-radius:18px;overflow:hidden}
 .demo-message{position:absolute;z-index:3;inset:0;display:grid;place-items:center;text-align:center;pointer-events:none}
 .demo-message strong{display:block;font-family:"Space Grotesk";font-size:clamp(38px,4vw,64px);letter-spacing:-.06em;line-height:.9}
 .demo-message span{display:block;color:#a9a3ba;font-size:13px;margin-top:14px}
+.demo-mode-label{position:absolute;z-index:4;left:24px;top:20px;font-size:10px;font-weight:800;letter-spacing:.16em;color:#7f7991;text-transform:uppercase}
+.demo-toolbar{position:absolute;z-index:9;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:7px;padding:6px;border:1px solid rgba(255,255,255,.14);background:rgba(10,8,19,.72);backdrop-filter:blur(14px);border-radius:999px}
+.demo-mode{border:0;background:transparent;color:#817b91;padding:9px 12px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.08em;transition:.18s}
+.demo-mode:hover{color:#fff;background:rgba(255,255,255,.06)}
+.demo-mode.active{background:#fff;color:#111}
+.demo-counter{position:absolute;z-index:8;right:22px;top:18px;display:flex;align-items:center;gap:7px;color:#817b91;font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+.demo-counter b{color:#fff;font-size:13px;letter-spacing:0}
+.demo-live{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 5px rgba(216,255,62,.08)}
+.demo-object{position:absolute;z-index:3;width:68px;height:68px;border-radius:50%;transform:translate(-50%,-50%);display:grid;place-items:center;font-family:"Space Grotesk";font-size:11px;font-weight:800;color:#111;animation:popIn .22s ease-out both;box-shadow:0 18px 45px rgba(0,0,0,.26);user-select:none;pointer-events:none}
+.demo-trail{position:absolute;z-index:3;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;animation:trailFade .8s ease-out forwards}
+.demo-control{position:absolute;z-index:3;left:50%;top:52%;width:62%;height:12px;border-radius:999px;background:rgba(255,255,255,.12);transform:translate(-50%,-50%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.demo-control:before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--level,62%);border-radius:inherit;background:linear-gradient(90deg,var(--pink),var(--cyan),var(--lime));transition:width .18s ease}
+.demo-control:after{content:"DRAG / TAP";position:absolute;top:20px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.14em;color:#777184;white-space:nowrap}
+@keyframes popIn{from{transform:translate(-50%,-50%) scale(.5);opacity:0}to{transform:translate(-50%,-50%) scale(1);opacity:1}}
+@keyframes trailFade{0%{opacity:.95;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(.2)}}
 .cursor-ring{position:absolute;z-index:7;width:52px;height:52px;border:2px solid var(--lime);border-radius:50%;left:67%;top:28%;transform:translate(-50%,-50%);pointer-events:none;box-shadow:0 0 35px rgba(216,255,62,.32);transition:width .12s,height .12s}
 .cursor-core{position:absolute;z-index:8;width:9px;height:9px;border-radius:50%;background:var(--lime);left:67%;top:28%;transform:translate(-50%,-50%);pointer-events:none}
 .ripple{position:absolute;z-index:4;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;animation:ripple .72s ease-out forwards}
@@ -127,6 +143,13 @@ border-radius:18px;overflow:hidden}
 .benefit:last-child{border-right:0}
 .benefit strong{display:block;font-family:"Space Grotesk";font-size:17px;margin-bottom:5px}
 .benefit span{font-size:12px;color:#817c90}
+
+/* moving experience wall */
+.experience-marquee{overflow:hidden;background:#f2effb;color:#101017;border-bottom:1px solid #ddd8ea;border-top:1px solid #ddd8ea}
+.marquee-track{display:flex;width:max-content;gap:34px;align-items:center;padding:19px 0;animation:marquee 24s linear infinite}
+.marquee-track span{font-family:"Space Grotesk";font-size:14px;font-weight:800;letter-spacing:.04em;white-space:nowrap}
+.marquee-track i{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--cyan));display:block;flex:0 0 auto}
+@keyframes marquee{to{transform:translateX(-50%)}}
 
 /* statement */
 .statement{background:var(--paper);color:var(--ink)}
@@ -246,6 +269,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
  .touch-stage{width:100%;border-radius:20px}
  .demo-screen{inset:19px;border-radius:13px}
  .demo-message strong{font-size:34px}
+ .demo-toolbar{bottom:12px}.demo-mode{padding:8px 9px;font-size:9px}.demo-mode-label{left:16px;top:14px}.demo-counter{right:16px;top:13px}
  .benefits{grid-template-columns:1fr}.benefit{border-right:0;border-bottom:1px solid var(--line);padding-left:0}
  .benefit:last-child{border-bottom:0}
  .statement-grid{gap:38px}
@@ -296,9 +320,16 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
     <div class="touch-demo" aria-label="Interaktive Touch-Demo">
       <div class="demo-orbit" aria-hidden="true"></div>
       <div class="touch-stage" id="touchStage">
-        <div class="demo-screen">
-          <div class="demo-message">
-            <div><strong>TRY IT.</strong><span>Bewege den Cursor und klicke in die Fläche.</span></div>
+        <div class="demo-screen" id="demoScreen">
+          <div class="demo-mode-label">Interactive demo</div>
+          <div class="demo-counter"><span class="demo-live"></span><b id="touchCount">0</b> touches</div>
+          <div class="demo-message" id="demoMessage">
+            <div><strong>TRY IT.</strong><span>Bewege den Cursor, tippe oder klicke in die Fläche.</span></div>
+          </div>
+          <div class="demo-toolbar" aria-label="Demo-Modus wählen">
+            <button class="demo-mode active" type="button" data-mode="draw">DRAW</button>
+            <button class="demo-mode" type="button" data-mode="play">PLAY</button>
+            <button class="demo-mode" type="button" data-mode="control">CONTROL</button>
           </div>
         </div>
         <div class="cursor-ring" id="cursorRing"></div>
@@ -317,6 +348,13 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
     <div class="benefit"><strong>Groß denken</strong><span>Auch für großformatige interaktive Anwendungen.</span></div>
     <div class="benefit"><strong>Für echte Erlebnisse</strong><span>Spielen, steuern, entdecken, konfigurieren.</span></div>
     <div class="benefit"><strong>LED direkt dazu</strong><span>Auf Wunsch Miete oder Kauf über Pixelgold.</span></div>
+  </div>
+</section>
+
+<section class="experience-marquee" aria-label="Touch-Frame Einsatzmöglichkeiten">
+  <div class="marquee-track" aria-hidden="true">
+    <span>TOUCH GAMES</span><i></i><span>MESSE</span><i></i><span>SHOWROOM</span><i></i><span>KIDS</span><i></i><span>PRODUKTKONFIGURATOR</span><i></i><span>FIRMENEVENT</span><i></i><span>MUSEUM</span><i></i><span>INTERACTIVE BRAND EXPERIENCE</span><i></i>
+    <span>TOUCH GAMES</span><i></i><span>MESSE</span><i></i><span>SHOWROOM</span><i></i><span>KIDS</span><i></i><span>PRODUKTKONFIGURATOR</span><i></i><span>FIRMENEVENT</span><i></i><span>MUSEUM</span><i></i><span>INTERACTIVE BRAND EXPERIENCE</span><i></i>
   </div>
 </section>
 
@@ -466,23 +504,78 @@ menu.addEventListener("click",function(){
 nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");menu.setAttribute("aria-expanded","false");});});
 
 const stage=document.getElementById("touchStage");
+const screen=document.getElementById("demoScreen");
 const ring=document.getElementById("cursorRing");
 const core=document.getElementById("cursorCore");
+const message=document.getElementById("demoMessage");
+const touchCount=document.getElementById("touchCount");
+const modeButtons=[...document.querySelectorAll(".demo-mode")];
 const palette=["#d8ff3e","#55e9ff","#ff5cc8","#8b6cff","#ff9d4d"];
 let colorIndex=0;
+let count=0;
+let activeMode="draw";
+let drawing=false;
 
+function localPoint(ev){
+  const rect=screen.getBoundingClientRect();
+  return {
+    x:Math.max(0,Math.min(rect.width,ev.clientX-rect.left)),
+    y:Math.max(0,Math.min(rect.height,ev.clientY-rect.top)),
+    rect
+  };
+}
 function movePointer(ev){
   const rect=stage.getBoundingClientRect();
   const x=Math.max(0,Math.min(rect.width,ev.clientX-rect.left));
   const y=Math.max(0,Math.min(rect.height,ev.clientY-rect.top));
   ring.style.left=x+"px"; ring.style.top=y+"px";
   core.style.left=x+"px"; core.style.top=y+"px";
+  if(activeMode==="draw" && drawing && ev.target.closest(".demo-screen")){
+    const p=localPoint(ev);
+    const dot=document.createElement("span");
+    dot.className="demo-trail";
+    dot.style.left=p.x+"px";dot.style.top=p.y+"px";
+    dot.style.background=palette[colorIndex%palette.length];
+    screen.appendChild(dot);
+    colorIndex++;
+    setTimeout(()=>dot.remove(),820);
+  }
+  if(activeMode==="control" && ev.target.closest(".demo-screen")){
+    const p=localPoint(ev);
+    const level=Math.round((p.x/p.rect.width)*100);
+    const bar=screen.querySelector(".demo-control");
+    if(bar) bar.style.setProperty("--level",Math.max(4,Math.min(100,level))+"%");
+  }
 }
+function clearDemoObjects(){
+  screen.querySelectorAll(".demo-object,.demo-trail,.demo-control").forEach(el=>el.remove());
+}
+function setMode(mode){
+  activeMode=mode;
+  clearDemoObjects();
+  modeButtons.forEach(btn=>btn.classList.toggle("active",btn.dataset.mode===mode));
+  if(mode==="draw"){
+    message.innerHTML='<div><strong>DRAW.</strong><span>Halte gedrückt und male direkt auf der Fläche.</span></div>';
+  }else if(mode==="play"){
+    message.innerHTML='<div><strong>PLAY.</strong><span>Tippe in die Fläche und starte kleine Touch-Targets.</span></div>';
+  }else{
+    message.innerHTML='<div><strong>CONTROL.</strong><span>Bewege dich über die Fläche und steuere den Regler.</span></div>';
+    const bar=document.createElement("div");
+    bar.className="demo-control";
+    screen.appendChild(bar);
+  }
+}
+modeButtons.forEach(btn=>btn.addEventListener("click",function(ev){
+  ev.stopPropagation();
+  setMode(btn.dataset.mode);
+}));
 stage.addEventListener("pointermove",movePointer);
 stage.addEventListener("pointerenter",function(){ring.style.opacity="1";core.style.opacity="1";});
-stage.addEventListener("pointerleave",function(){ring.style.opacity=".45";core.style.opacity=".45";});
+stage.addEventListener("pointerleave",function(){ring.style.opacity=".45";core.style.opacity=".45";drawing=false;});
 stage.addEventListener("pointerdown",function(ev){
+  if(ev.target.closest(".demo-toolbar")) return;
   movePointer(ev);
+  drawing=true;
   ring.style.width="38px";ring.style.height="38px";
   const rect=stage.getBoundingClientRect();
   const ripple=document.createElement("span");
@@ -491,11 +584,34 @@ stage.addEventListener("pointerdown",function(ev){
   ripple.style.top=(ev.clientY-rect.top)+"px";
   ripple.style.color=palette[colorIndex%palette.length];
   ripple.style.background=palette[colorIndex%palette.length];
-  colorIndex++;
   stage.appendChild(ripple);
-  setTimeout(function(){ripple.remove();},760);
+  setTimeout(()=>ripple.remove(),760);
+
+  if(ev.target.closest(".demo-screen")){
+    count++;
+    touchCount.textContent=count;
+    const p=localPoint(ev);
+    if(activeMode==="play"){
+      const obj=document.createElement("span");
+      obj.className="demo-object";
+      obj.style.left=p.x+"px";obj.style.top=p.y+"px";
+      obj.style.background=palette[colorIndex%palette.length];
+      obj.textContent=["TAP","GO!","WOW","PLAY"][count%4];
+      screen.appendChild(obj);
+      setTimeout(()=>obj.remove(),1100);
+    }
+    if(activeMode==="control"){
+      const bar=screen.querySelector(".demo-control");
+      if(bar){
+        const level=Math.round((p.x/p.rect.width)*100);
+        bar.style.setProperty("--level",Math.max(4,Math.min(100,level))+"%");
+      }
+    }
+  }
+  colorIndex++;
 });
-stage.addEventListener("pointerup",function(){ring.style.width="52px";ring.style.height="52px";});
+stage.addEventListener("pointerup",function(){drawing=false;ring.style.width="52px";ring.style.height="52px";});
+stage.addEventListener("pointercancel",function(){drawing=false;});
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 </body>
