@@ -182,6 +182,22 @@ border-radius:18px;overflow:hidden}
 .check-trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 .check-trust span{font-size:11px;font-weight:800;padding:9px 12px;border-radius:999px;border:1px solid #ded8e8;background:#fff;color:#5d5668}
 
+/* real setup / proof */
+.proof{background:#0b0912;color:#fff;position:relative;overflow:hidden}
+.proof:before{content:"";position:absolute;inset:auto -120px -220px auto;width:560px;height:560px;border-radius:50%;background:rgba(85,233,255,.08);filter:blur(110px)}
+.proof-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.28fr .72fr;gap:54px;align-items:center}
+.proof-media{position:relative;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#12101b;box-shadow:0 36px 100px rgba(0,0,0,.35)}
+.proof-media img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.proof-badge{position:absolute;left:18px;top:18px;padding:9px 12px;border-radius:999px;background:rgba(10,8,19,.78);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16);font-size:11px;font-weight:800;letter-spacing:.06em}
+.proof-copy{max-width:470px}
+.proof-copy .section-title{font-size:clamp(46px,5vw,76px)}
+.proof-copy p{color:#aaa4b7;font-size:18px;line-height:1.65;margin:24px 0 0}
+.proof-caption{font-size:11px!important;color:#716b7b!important;margin-top:18px!important}
+.proof-points{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.proof-points span{padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:11px;font-weight:800;color:#c8c2d0;background:rgba(255,255,255,.025)}
+@media(max-width:980px){.proof-grid{grid-template-columns:1fr;gap:34px}.proof-copy{max-width:760px}}
+@media(max-width:600px){.proof-media{border-radius:20px}.proof-badge{left:12px;top:12px}.proof-copy p{font-size:16px}}
+
 /* requirements */
 .requirements{background:#100d18;color:#fff}
 .requirements-head{display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:end;margin-bottom:54px}
@@ -679,6 +695,26 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
           <p>Karten, Zeitlinien, Informationen oder Exponate direkt über die große Fläche bedienen.</p>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="section proof" id="testaufbau">
+  <div class="wrap proof-grid">
+    <div class="proof-media">
+      <img src="./Interaktiver%20Pong-Spieltisch%20im%20modernen%20Spielzimmer.png" alt="Touch-Frame Testaufbau mit einer Pingpong-Anwendung auf einer großen interaktiven Bildfläche" loading="lazy">
+      <div class="proof-badge">TOUCH-FRAME TESTAUFBAU</div>
+    </div>
+    <div class="proof-copy">
+      <div class="kicker" style="color:#817b92">Im Test</div>
+      <h2 class="section-title">Pingpong auf der Touch-Fläche.</h2>
+      <p>Auf diesem Aufbau haben wir Touch-Frame mit einer Pingpong-Anwendung getestet. Die große Bildfläche wird dabei direkt zum Spielfeld.</p>
+      <div class="proof-points">
+        <span>große Touch-Fläche</span>
+        <span>direkte Eingabe</span>
+        <span>interaktive Anwendung</span>
+      </div>
+      <p class="proof-caption">Visualisierung auf Basis unseres echten Testaufbaus. Hintergrund und Unterbau wurden für die Darstellung aufgeräumt.</p>
     </div>
   </div>
 </section>
