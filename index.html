@@ -187,11 +187,12 @@ border-radius:18px;overflow:hidden}
 .proof:before{content:"";position:absolute;inset:auto -120px -220px auto;width:560px;height:560px;border-radius:50%;background:rgba(85,233,255,.08);filter:blur(110px)}
 .proof-head{position:relative;z-index:2;display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:end;margin-bottom:48px}
 .proof-head p{margin:0;color:#9f99aa;max-width:560px;justify-self:end;font-size:18px;line-height:1.65}
-.proof-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:stretch}
-.proof-card{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:28px;overflow:hidden;background:#12101b;min-height:560px}
+.proof-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .72fr .9fr;gap:16px;align-items:stretch;max-width:1240px;margin:0 auto}
+.proof-card{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:24px;overflow:hidden;background:#12101b;height:410px}
 .proof-card img{display:block;width:100%;height:100%;object-fit:cover}
-.proof-card.wide img{aspect-ratio:16/9}
-.proof-card.tall img{object-position:center center}
+.proof-card.wide img{object-position:center center}
+.proof-card.tall img{object-position:center 35%}
+.proof-card.extra img{object-position:center center}
 .proof-overlay{position:absolute;left:0;right:0;bottom:0;padding:80px 28px 26px;background:linear-gradient(to top,rgba(7,6,11,.96),rgba(7,6,11,.72) 52%,transparent)}
 .proof-label{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#a59fac;margin-bottom:8px}
 .proof-overlay h3{font-size:28px;line-height:1.05;letter-spacing:-.035em;margin:0 0 8px}
@@ -200,13 +201,14 @@ border-radius:18px;overflow:hidden}
 @media(max-width:980px){
  .proof-head{grid-template-columns:1fr;gap:22px}
  .proof-head p{justify-self:start}
- .proof-grid{grid-template-columns:1fr}
- .proof-card{min-height:0}
- .proof-card.tall{max-height:720px}
- .proof-card.tall img{aspect-ratio:4/5;object-fit:cover}
+ .proof-grid{grid-template-columns:1fr 1fr}
+ .proof-card{height:360px}
+ .proof-card.wide{grid-column:1/-1}
+ .proof-card.tall img{object-position:center 32%}
 }
 @media(max-width:600px){
- .proof-card{border-radius:20px}
+ .proof-grid{grid-template-columns:1fr}
+ .proof-card,.proof-card.wide{grid-column:auto;height:330px;border-radius:20px}
  .proof-overlay{padding:64px 20px 20px}
  .proof-overlay h3{font-size:24px}
  .proof-note{left:12px;top:12px}
@@ -741,6 +743,16 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
           <div class="proof-label">Information & Bedienung</div>
           <h3>Digital Rollup mit Touch.</h3>
           <p>Produkte, Informationen, Videos oder Anwendungen direkt am Display bedienen.</p>
+        </div>
+      </article>
+
+      <article class="proof-card extra">
+        <img src="./ChatGPT-Bild%204.%20Okt.%202026,%2012_45_51.png" alt="Weitere Touch-Frame Anwendung im Einsatz" loading="lazy">
+        <div class="proof-note">ANWENDUNG</div>
+        <div class="proof-overlay">
+          <div class="proof-label">Touch im Einsatz</div>
+          <h3>Direkt bedienen.</h3>
+          <p>Touch-Frame lässt sich für unterschiedliche Inhalte und Einsatzzwecke aufbauen.</p>
         </div>
       </article>
     </div>
