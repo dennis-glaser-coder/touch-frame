@@ -133,7 +133,6 @@ border-radius:18px;overflow:hidden}
 @keyframes ripple{0%{opacity:1;box-shadow:0 0 0 0 currentColor}100%{opacity:0;box-shadow:0 0 0 80px transparent}}
 .float-chip{position:absolute;z-index:8;padding:10px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.17);background:rgba(15,12,28,.82);backdrop-filter:blur(12px);font-size:12px;color:#d8d4e2}
 .chip-a{left:-18px;top:23%}.chip-b{right:-12px;top:67%}.chip-c{left:9%;bottom:3%}
-.chip-a b{color:var(--cyan)}.chip-b b{color:var(--pink)}.chip-c b{color:var(--lime)}
 
 /* benefit strip */
 .benefit-strip{background:#0e0b18;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -170,7 +169,6 @@ border-radius:18px;overflow:hidden}
 .play-card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.28)}
 .play-card h3{font-size:31px;letter-spacing:-.04em;margin:0 0 9px;position:relative;z-index:3}
 .play-card p{color:#918ba2;font-size:14px;max-width:310px;position:relative;z-index:3}
-.play-card .num{position:absolute;right:22px;top:18px;font-family:"Space Grotesk";font-size:12px;color:#686276}
 .play-card:after{content:"";position:absolute;border-radius:50%;filter:blur(0);opacity:.72}
 .c1{grid-column:span 5;background:linear-gradient(145deg,#151022,#13111c)}
 .c1:after{width:230px;height:230px;background:radial-gradient(circle,var(--pink),transparent 66%);right:-75px;bottom:-95px}
@@ -186,8 +184,7 @@ border-radius:18px;overflow:hidden}
 .how-head{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:68px}
 .how-head p{justify-self:end;max-width:570px;color:#696474;margin:0}
 .steps{border-top:1px solid #d8d4e3}
-.step{display:grid;grid-template-columns:110px .9fr 1.1fr;gap:40px;padding:31px 0;border-bottom:1px solid #d8d4e3;align-items:start}
-.step-num{font-family:"Space Grotesk";font-size:12px;color:#8f8999}
+.step{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;padding:31px 0;border-bottom:1px solid #d8d4e3;align-items:start}
 .step h3{font-size:27px;letter-spacing:-.04em;margin:0}
 .step p{margin:0;color:#6e6878;max-width:690px}
 .step em{font-style:normal;color:#101017;font-weight:700}
@@ -243,7 +240,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
  .play-head p,.how-head p{justify-self:start}
  .benefits{grid-template-columns:1fr 1fr}
  .benefit:nth-child(2){border-right:0}.benefit:nth-child(3){padding-left:0}
- .step{grid-template-columns:70px .85fr 1.15fr}
+ .step{grid-template-columns:.85fr 1.15fr}
 }
 @media(max-width:820px){
  .wrap{width:calc(100% - 34px)}
@@ -257,7 +254,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
  .touch-stage{border-radius:26px}
  .float-chip{display:none}
  .play-grid{grid-template-columns:1fr}.c1,.c2,.c3,.c4,.c5{grid-column:auto}
- .step{grid-template-columns:50px 1fr}.step p{grid-column:2}
+ .step{grid-template-columns:1fr}.step p{grid-column:auto}
  .footer-grid{flex-direction:column}
 }
 @media(max-width:560px){
@@ -307,14 +304,14 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
 <section class="hero" id="top">
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <div class="hero-eyebrow"><span class="live-dot"></span> Interaktion ohne neue Bildfläche</div>
+      <div class="hero-eyebrow"><span class="live-dot"></span> Bestehende Fläche. Neue Funktion.</div>
       <h1>MAKE ANY DISPLAY <span class="touch">TOUCH.</span></h1>
-      <p>Touch-Frame macht LED-Wände, Projektionen und Displays interaktiv. Aus einer visuellen Fläche wird eine Fläche, die Menschen wirklich benutzen.</p>
+      <p>Touch-Frame macht LED-Wände, Projektionen und Displays bedienbar. Tippen, wischen, auswählen oder spielen – direkt auf der Fläche.</p>
       <div class="hero-actions">
         <a class="button primary" href="#anwendungen">Möglichkeiten entdecken <span>↗</span></a>
         <a class="button secondary" href="mailto:kontakt@pixelgold.de?subject=Touch-Frame%20Projektanfrage">Projekt besprechen</a>
       </div>
-      <div class="hero-note"><span>●</span> Für bestehende Flächen oder als Komplettlösung mit Pixelgold.</div>
+      <div class="hero-note"><span>●</span> Für vorhandene Systeme oder komplett mit LED-Wand von Pixelgold.</div>
     </div>
 
     <div class="touch-demo" aria-label="Interaktive Touch-Demo">
@@ -335,9 +332,9 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
         <div class="cursor-ring" id="cursorRing"></div>
         <div class="cursor-core" id="cursorCore"></div>
       </div>
-      <div class="float-chip chip-a"><b>01</b> LED-Wall</div>
-      <div class="float-chip chip-b"><b>02</b> Projektion</div>
-      <div class="float-chip chip-c"><b>03</b> Display</div>
+      <div class="float-chip chip-a">LED-Wall</div>
+      <div class="float-chip chip-b">Projektion</div>
+      <div class="float-chip chip-c">Display</div>
     </div>
   </div>
 </section>
@@ -353,19 +350,19 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
 
 <section class="experience-marquee" aria-label="Touch-Frame Einsatzmöglichkeiten">
   <div class="marquee-track" aria-hidden="true">
-    <span>TOUCH GAMES</span><i></i><span>MESSE</span><i></i><span>SHOWROOM</span><i></i><span>KIDS</span><i></i><span>PRODUKTKONFIGURATOR</span><i></i><span>FIRMENEVENT</span><i></i><span>MUSEUM</span><i></i><span>INTERACTIVE BRAND EXPERIENCE</span><i></i>
-    <span>TOUCH GAMES</span><i></i><span>MESSE</span><i></i><span>SHOWROOM</span><i></i><span>KIDS</span><i></i><span>PRODUKTKONFIGURATOR</span><i></i><span>FIRMENEVENT</span><i></i><span>MUSEUM</span><i></i><span>INTERACTIVE BRAND EXPERIENCE</span><i></i>
+    <span>TOUCH GAMES</span><i></i><span>MESSE</span><i></i><span>SHOWROOM</span><i></i><span>KIDS</span><i></i><span>PRODUKTKONFIGURATOR</span><i></i><span>FIRMENEVENT</span><i></i><span>MUSEUM</span><i></i><span>INTERAKTIVE PRÄSENTATION</span><i></i>
+    <span>TOUCH GAMES</span><i></i><span>MESSE</span><i></i><span>SHOWROOM</span><i></i><span>KIDS</span><i></i><span>PRODUKTKONFIGURATOR</span><i></i><span>FIRMENEVENT</span><i></i><span>MUSEUM</span><i></i><span>INTERAKTIVE PRÄSENTATION</span><i></i>
   </div>
 </section>
 
 <section class="section statement" id="idee">
   <div class="wrap statement-grid">
     <div>
-      <div class="kicker">Eine Fläche. Neue Möglichkeiten.</div>
-      <h2 class="section-title">Nicht nur zeigen. Reagieren.</h2>
+      <div class="kicker">Mehr aus der Fläche machen</div>
+      <h2 class="section-title">Nicht nur zeigen. Benutzen.</h2>
     </div>
     <div class="statement-copy">
-      <p class="lead">Displays erzählen normalerweise nur in eine Richtung. Touch-Frame ändert das. Inhalte werden steuerbar, Produkte werden spielbar, Informationen werden entdeckbar – und Besucher werden vom Zuschauer zum Teil des Erlebnisses.</p>
+      <p class="lead">Eine LED-Wand oder Projektion zeigt normalerweise nur Inhalte. Mit Touch-Frame wird daraus eine Fläche, auf der Menschen direkt etwas auswählen, steuern, verschieben oder spielen können.</p>
       <div class="compat-line" aria-label="Geeignete Anwendungsflächen">
         <span>LED-Wände</span><span>Projektionen</span><span>Displays</span><span>Videowalls</span><span>Sonderformate</span>
       </div>
@@ -377,32 +374,32 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
   <div class="wrap">
     <div class="play-head">
       <div>
-        <div class="kicker" style="color:#817b92">Built for interaction</div>
-        <h2 class="section-title">Von Messe bis Spielplatz.</h2>
+        <div class="kicker" style="color:#817b92">Wo Touch sinnvoll wird</div>
+        <h2 class="section-title">Für Messe, Event, Showroom und mehr.</h2>
       </div>
-      <p class="lead">Touch ist kein Branchenprodukt. Überall dort, wo Menschen Inhalte nicht nur sehen, sondern erleben sollen, wird aus einer normalen Bildfläche ein Werkzeug.</p>
+      <p class="lead">Die Einsatzmöglichkeiten sind breit. Überall dort, wo Besucher etwas selbst auswählen, ausprobieren oder steuern sollen, kann Touch-Frame interessant werden.</p>
     </div>
 
     <div class="play-grid">
       <article class="play-card c1">
-        <span class="num">01</span><div class="card-icon">✦</div>
-        <h3>Messen & Events</h3><p>Produkte erkunden, Konfiguratoren bedienen, Leads aktivieren und Besucher länger am Stand halten.</p>
+        <div class="card-icon">✦</div>
+        <h3>Messen & Events</h3><p>Produkte zeigen, Konfiguratoren bedienen, Spiele starten oder Inhalte direkt am Stand auswählen.</p>
       </article>
       <article class="play-card c2">
-        <span class="num">02</span><div class="card-icon">◉</div>
-        <h3>Kids & Edutainment</h3><p>Spiele, Lernflächen, Quizformate und interaktive Welten, die Bewegung und Inhalte verbinden.</p>
+        <div class="card-icon">◉</div>
+        <h3>Kinder & Spiele</h3><p>Große Spielflächen, Quizformate, Lernanwendungen oder einfache Reaktionsspiele.</p>
       </article>
       <article class="play-card c3">
-        <span class="num">03</span><div class="card-icon">↗</div>
-        <h3>Showrooms</h3><p>Produkte entdecken, Varianten auswählen und Marken erlebbar machen.</p>
+        <div class="card-icon">↗</div>
+        <h3>Showrooms</h3><p>Produkte auswählen, Varianten vergleichen oder Inhalte direkt auf der Präsentationsfläche steuern.</p>
       </article>
       <article class="play-card c4">
-        <span class="num">04</span><div class="card-icon">◎</div>
-        <h3>Firmenfeiern</h3><p>Games, Fotowände, Abstimmungen, Team-Challenges und interaktive Unterhaltung.</p>
+        <div class="card-icon">◎</div>
+        <h3>Firmenfeiern</h3><p>Spiele, Abstimmungen, Fotowände oder kleine Team-Aktionen auf einer großen Fläche.</p>
       </article>
       <article class="play-card c5">
-        <span class="num">05</span><div class="card-icon">＋</div>
-        <h3>Museen & Räume</h3><p>Informationen intuitiv zugänglich machen und Ausstellungen um eine interaktive Ebene erweitern.</p>
+        <div class="card-icon">＋</div>
+        <h3>Museen & Ausstellungen</h3><p>Informationen auswählen, Karten bedienen oder Inhalte auf einer großen Fläche zugänglich machen.</p>
       </article>
     </div>
   </div>
@@ -412,27 +409,27 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
   <div class="wrap">
     <div class="how-head">
       <div>
-        <div class="kicker">Simple idea. Big effect.</div>
-        <h2 class="section-title">Bildfläche bleibt. Touch kommt dazu.</h2>
+        <div class="kicker">So wird die Fläche touchfähig</div>
+        <h2 class="section-title">Die Bildfläche bleibt. Touch kommt dazu.</h2>
       </div>
-      <p class="lead">Die Stärke von Touch-Frame ist nicht, dass wir eine neue Displaywelt erfinden. Sondern dass wir vorhandene oder neu geplante Bildflächen um Interaktion erweitern.</p>
+      <p class="lead">Touch-Frame ergänzt vorhandene oder neu geplante Bildflächen um eine Touch-Funktion. Die eigentliche Anzeige bleibt dabei, wie sie ist.</p>
     </div>
 
     <div class="steps">
       <div class="step">
-        <div class="step-num">01</div><h3>Fläche wählen</h3>
+        <h3>Fläche wählen</h3>
         <p>LED-Wand, Projektion oder Display: Wir schauen auf Format, Einbausituation und Anwendung.</p>
       </div>
       <div class="step">
-        <div class="step-num">02</div><h3>Touch-Frame integrieren</h3>
+        <h3>Touch-Frame integrieren</h3>
         <p>Der Rahmen wird passend zur Anwendung geplant und ergänzt die bestehende Bildfläche um die <em>Touch-Ebene</em>.</p>
       </div>
       <div class="step">
-        <div class="step-num">03</div><h3>Inhalt interaktiv machen</h3>
+        <h3>Inhalt interaktiv machen</h3>
         <p>Vom simplen Button bis zum Spiel oder Produktkonfigurator: Die Software bestimmt, was aus der Fläche wird.</p>
       </div>
       <div class="step">
-        <div class="step-num">04</div><h3>Menschen machen den Rest</h3>
+        <h3>Menschen machen den Rest</h3>
         <p>Tippen, wischen, spielen, auswählen, entdecken. Genau hier wird aus Technik ein Erlebnis.</p>
       </div>
     </div>
@@ -445,9 +442,9 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
       <div class="pg-screen"></div><div class="pg-stand"></div><div class="pg-tag">TOUCH-FRAME + PIXELGOLD</div>
     </div>
     <div class="pixelgold-copy">
-      <div class="kicker" style="color:#7f798d">Noch keine Bildfläche?</div>
+      <div class="kicker" style="color:#7f798d">LED-Wand gleich mit dazu?</div>
       <h2 class="section-title">Dann liefern wir sie einfach mit.</h2>
-      <p class="lead">Mit Pixelgold entsteht auf Wunsch die komplette Lösung aus einer Hand: LED-Wand planen, mieten oder kaufen – Touch-Frame ergänzen – interaktive Anwendung umsetzen. Für temporäre Events genauso wie für dauerhafte Installationen.</p>
+      <p class="lead">Über Pixelgold können wir die passende LED-Wand direkt mitliefern – zur Miete oder zum Kauf. So kommen Bildfläche und Touch-Lösung aus einer Hand.</p>
       <div class="cross-links">
         <a class="button primary" href="https://pixelgold-visuals.de/" target="_blank" rel="noopener">LED-Lösungen bei Pixelgold ↗</a>
         <a class="button secondary" href="https://led-trailer.com/" target="_blank" rel="noopener">Mobile LED-Screens ↗</a>
@@ -459,9 +456,9 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
 <section class="section audience">
   <div class="wrap">
     <div class="audience-head">
-      <div class="kicker">One frame. Endless ideas.</div>
-      <h2 class="section-title">Was soll deine Fläche können?</h2>
-      <p class="lead">Die Zielgruppe ist nicht eine Branche. Die Zielgruppe ist jeder Ort, an dem Interaktion mehr Wirkung erzeugt als reines Zuschauen.</p>
+      <div class="kicker">Viele Einsatzmöglichkeiten</div>
+      <h2 class="section-title">Was soll auf der Fläche passieren?</h2>
+      <p class="lead">Ob Messe, Schule, Showroom, Event oder Ausstellung: Entscheidend ist nicht die Branche, sondern was Menschen auf der Fläche machen sollen.</p>
     </div>
     <div class="tags">
       <span>Messebau</span><span>Agenturen</span><span>Eventtechnik</span><span>Freizeitparks</span><span>Museen</span><span>Schulen</span><span>Unternehmen</span><span>Retail</span><span>Showrooms</span><span>Sportevents</span><span>Produktlaunches</span><span>Firmenfeiern</span><span>Gaming</span><span>Ausstellungen</span><span>Erlebniswelten</span><span>Pop-up Stores</span>
@@ -555,11 +552,11 @@ function setMode(mode){
   clearDemoObjects();
   modeButtons.forEach(btn=>btn.classList.toggle("active",btn.dataset.mode===mode));
   if(mode==="draw"){
-    message.innerHTML='<div><strong>DRAW.</strong><span>Halte gedrückt und male direkt auf der Fläche.</span></div>';
+    message.innerHTML='<div><strong>DRAW.</strong><span>Gedrückt halten und direkt auf der Fläche zeichnen.</span></div>';
   }else if(mode==="play"){
-    message.innerHTML='<div><strong>PLAY.</strong><span>Tippe in die Fläche und starte kleine Touch-Targets.</span></div>';
+    message.innerHTML='<div><strong>PLAY.</strong><span>Tippe in die Fläche und probiere es aus.</span></div>';
   }else{
-    message.innerHTML='<div><strong>CONTROL.</strong><span>Bewege dich über die Fläche und steuere den Regler.</span></div>';
+    message.innerHTML='<div><strong>CONTROL.</strong><span>Bewege den Regler direkt über die Fläche.</span></div>';
     const bar=document.createElement("div");
     bar.className="demo-control";
     screen.appendChild(bar);
