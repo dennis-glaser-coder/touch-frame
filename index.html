@@ -229,43 +229,41 @@ border-radius:18px;overflow:hidden}
 .step em{font-style:normal;color:#101017;font-weight:700}
 
 /* pixelgold */
-.pixelgold{position:relative;background:#09070f;overflow:hidden;padding:84px 0}
+.pixelgold{position:relative;background:#09070f;overflow:hidden;padding:92px 0;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
 .pixelgold:before{content:"";position:absolute;inset:0;background:
- radial-gradient(circle at 18% 22%,rgba(216,255,62,.08),transparent 27%),
- radial-gradient(circle at 82% 72%,rgba(85,233,255,.07),transparent 28%);pointer-events:none}
-.pixelgold-grid{position:relative;z-index:2;display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
-.pg-visual{min-height:440px}
-.pg-panel{height:100%;min-height:440px;border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;background:
- radial-gradient(circle at 72% 30%,rgba(85,233,255,.18),transparent 28%),
- radial-gradient(circle at 28% 72%,rgba(216,255,62,.14),transparent 25%),
- linear-gradient(145deg,#16121f,#0c0a11);box-shadow:0 28px 80px rgba(0,0,0,.28)}
-.pg-mini{font-size:10px;font-weight:800;letter-spacing:.13em;color:#8e8798;text-transform:uppercase}
-.pg-panel strong{font-size:clamp(58px,7vw,96px);line-height:.82;letter-spacing:-.065em}
-.pg-panel-tags{display:flex;gap:8px;flex-wrap:wrap}
-.pg-panel-tags span{font-size:10px;font-weight:800;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 10px;color:#c0bac8;background:rgba(255,255,255,.03)}
+ radial-gradient(circle at 15% 20%,rgba(216,255,62,.07),transparent 28%),
+ radial-gradient(circle at 82% 76%,rgba(85,233,255,.055),transparent 30%);pointer-events:none}
+.pixelgold-grid{position:relative;z-index:2;display:grid;grid-template-columns:.78fr 1.22fr;gap:84px;align-items:stretch}
+.pg-visual{min-height:100%;display:flex}
+.pg-panel{width:100%;min-height:430px;border-radius:28px;padding:34px 36px;border:1px solid rgba(255,255,255,.11);display:flex;flex-direction:column;justify-content:space-between;background:
+ linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.01)),
+ #0d0b13}
+.pg-mini{font-size:10px;font-weight:800;letter-spacing:.14em;color:#8e8798;text-transform:uppercase}
+.pg-panel strong{font-size:clamp(64px,7vw,102px);line-height:.8;letter-spacing:-.065em}
+.pg-panel strong span{display:block;color:var(--lime)}
+.pg-panel-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;border-top:1px solid rgba(255,255,255,.10);color:#9c95a5;font-size:11px}
+.pg-panel-foot b{color:#fff;font-weight:800}
+.pixelgold-copy{align-self:center}
 .pixelgold-copy .kicker{color:#807a8b}
-.pixelgold-copy .section-title{font-size:clamp(46px,4.7vw,70px);max-width:760px}
-.pixelgold-copy>.lead{color:#aaa3b4;margin:22px 0 28px;max-width:660px}
-.pg-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 24px}
-.pg-option{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035);border-radius:18px;padding:20px}
-.pg-option strong{display:block;font-size:17px;margin-bottom:6px}
-.pg-option span{display:block;color:#878190;font-size:12px;line-height:1.5}
-.pg-option.highlight{border-color:rgba(216,255,62,.28);background:rgba(216,255,62,.05)}
-.pg-option.highlight strong{color:var(--lime)}
-.pg-checks{display:grid;gap:8px;margin:0 0 26px}
-.pg-check{display:flex;gap:10px;align-items:flex-start;color:#b6b0be;font-size:12px}
-.pg-check i{width:18px;height:18px;flex:0 0 18px;border-radius:50%;background:rgba(216,255,62,.12);color:var(--lime);display:grid;place-items:center;font-style:normal;font-size:10px;font-weight:900;margin-top:1px}
+.pixelgold-copy .section-title{font-size:clamp(46px,4.5vw,68px);max-width:760px}
+.pixelgold-copy>.lead{color:#aaa3b4;margin:22px 0 30px;max-width:690px;font-size:17px}
+.pg-choices{border-top:1px solid rgba(255,255,255,.12);margin-bottom:28px}
+.pg-choice{display:grid;grid-template-columns:190px 1fr;gap:28px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.12);align-items:start}
+.pg-choice strong{font-size:15px;line-height:1.35}
+.pg-choice span{color:#928b9c;font-size:13px;line-height:1.55}
+.pg-choice.highlight strong{color:var(--lime)}
 .cross-links{display:flex;gap:10px;flex-wrap:wrap}
-.pixelgold-note{margin-top:14px;color:#716b7a;font-size:10px}
+.pixelgold .button.secondary{background:transparent}
 @media(max-width:1100px){
- .pixelgold-grid{grid-template-columns:1fr;gap:36px}
- .pg-visual{min-height:320px}
- .pg-panel{min-height:320px}
+ .pixelgold-grid{grid-template-columns:1fr;gap:34px}
+ .pg-panel{min-height:300px}
 }
 @media(max-width:650px){
- .pixelgold{padding:78px 0}
- .pg-options{grid-template-columns:1fr}
- .pg-panel{min-height:280px;padding:24px}
+ .pixelgold{padding:72px 0}
+ .pg-panel{min-height:260px;padding:24px}
+ .pg-choice{grid-template-columns:1fr;gap:7px;padding:16px 0}
+ .cross-links{flex-direction:column}
+ .cross-links .button{width:100%}
 }
 
 /* audience */
@@ -571,35 +569,36 @@ footer{background:#08070d;color:#fff;padding:32px 0 26px}
 
 <section class="pixelgold" id="pixelgold">
   <div class="wrap pixelgold-grid">
-    <div class="pg-visual" aria-label="LED und Touch-Frame zusammen geplant">
+    <div class="pg-visual" aria-label="LED-Wand und Touch-Frame von Pixelgold">
       <div class="pg-panel">
-        <span class="pg-mini">PIXELGOLD + TOUCH-FRAME</span>
-        <strong>LED<br>+ TOUCH</strong>
-        <div class="pg-panel-tags"><span>Miete</span><span>Kauf</span><span>Planung</span><span>Aufbau</span></div>
+        <span class="pg-mini">PIXELGOLD × TOUCH-FRAME</span>
+        <strong>LED <span>+ TOUCH</span></strong>
+        <div class="pg-panel-foot">
+          <b>Miete oder Kauf</b>
+          <span>Planung · Lieferung · Aufbau</span>
+        </div>
       </div>
     </div>
 
     <div class="pixelgold-copy">
-      <div class="kicker">LED-Wand noch nicht vorhanden?</div>
-      <h2 class="section-title">Touch-Frame einzeln oder komplett mit LED-Wand.</h2>
-      <p class="lead">Fehlt die LED-Wand noch, übernimmt Pixelgold auf Wunsch Planung, Lieferung und Aufbau – zur Miete oder zum Kauf.</p>
-      <div class="pg-options">
-        <div class="pg-option">
-          <strong>Touch-Frame für vorhandene Technik</strong>
-          <span>Für vorhandene LED-Wände, Displays, Videowalls oder Projektionen.</span>
+      <div class="kicker">LED + Touch</div>
+      <h2 class="section-title">LED-Wand vorhanden? Dann kommt Touch dazu.</h2>
+      <p class="lead">Wenn noch keine LED-Wand da ist, liefert Pixelgold sie direkt mit. LED-Wand und Touch-Frame können so von Anfang an zusammen geplant werden.</p>
+
+      <div class="pg-choices">
+        <div class="pg-choice">
+          <strong>LED-Wand schon vorhanden</strong>
+          <span>Wir planen Touch-Frame passend zu Größe, Aufbau und Anwendung.</span>
         </div>
-        <div class="pg-option highlight">
-          <strong>Komplett mit LED-Wand</strong>
-          <span>LED-Wand und Touch-Frame gemeinsam geplant, geliefert und aufgebaut.</span>
+        <div class="pg-choice highlight">
+          <strong>LED-Wand wird noch gebraucht</strong>
+          <span>Pixelgold liefert die passende LED-Wand zur Miete oder zum Kauf und stimmt Touch-Frame direkt darauf ab.</span>
         </div>
       </div>
-      <div class="pg-checks">
-        <div class="pg-check"><i>✓</i><span>temporär für Messe, Event oder Firmenfeier</span></div>
-        <div class="pg-check"><i>✓</i><span>dauerhaft für Showroom, Ausstellung oder Installation</span></div>
-      </div>
+
       <div class="cross-links">
-        <a class="button primary" href="https://pixelgold-visuals.de/" target="_blank" rel="noopener">LED-Wand mit anfragen ↗</a>
-        <a class="button secondary" href="#projektcheck">Nur Touch-Frame prüfen</a>
+        <a class="button primary" href="https://pixelgold-visuals.de/" target="_blank" rel="noopener">LED + Touch anfragen ↗</a>
+        <a class="button secondary" href="#projektcheck">Nur Touch-Frame anfragen</a>
       </div>
     </div>
   </div>
