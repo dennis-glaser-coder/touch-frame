@@ -182,21 +182,35 @@ border-radius:18px;overflow:hidden}
 .check-trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 .check-trust span{font-size:11px;font-weight:800;padding:9px 12px;border-radius:999px;border:1px solid #ded8e8;background:#fff;color:#5d5668}
 
-/* real setup / proof */
+/* application proof */
 .proof{background:#0b0912;color:#fff;position:relative;overflow:hidden}
 .proof:before{content:"";position:absolute;inset:auto -120px -220px auto;width:560px;height:560px;border-radius:50%;background:rgba(85,233,255,.08);filter:blur(110px)}
-.proof-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.28fr .72fr;gap:54px;align-items:center}
-.proof-media{position:relative;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#12101b;box-shadow:0 36px 100px rgba(0,0,0,.35)}
-.proof-media img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-.proof-badge{position:absolute;left:18px;top:18px;padding:9px 12px;border-radius:999px;background:rgba(10,8,19,.78);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16);font-size:11px;font-weight:800;letter-spacing:.06em}
-.proof-copy{max-width:470px}
-.proof-copy .section-title{font-size:clamp(46px,5vw,76px)}
-.proof-copy p{color:#aaa4b7;font-size:18px;line-height:1.65;margin:24px 0 0}
-.proof-caption{font-size:11px!important;color:#716b7b!important;margin-top:18px!important}
-.proof-points{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
-.proof-points span{padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:11px;font-weight:800;color:#c8c2d0;background:rgba(255,255,255,.025)}
-@media(max-width:980px){.proof-grid{grid-template-columns:1fr;gap:34px}.proof-copy{max-width:760px}}
-@media(max-width:600px){.proof-media{border-radius:20px}.proof-badge{left:12px;top:12px}.proof-copy p{font-size:16px}}
+.proof-head{position:relative;z-index:2;display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:end;margin-bottom:48px}
+.proof-head p{margin:0;color:#9f99aa;max-width:560px;justify-self:end;font-size:18px;line-height:1.65}
+.proof-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:stretch}
+.proof-card{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:28px;overflow:hidden;background:#12101b;min-height:560px}
+.proof-card img{display:block;width:100%;height:100%;object-fit:cover}
+.proof-card.wide img{aspect-ratio:16/9}
+.proof-card.tall img{object-position:center center}
+.proof-overlay{position:absolute;left:0;right:0;bottom:0;padding:80px 28px 26px;background:linear-gradient(to top,rgba(7,6,11,.96),rgba(7,6,11,.72) 52%,transparent)}
+.proof-label{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#a59fac;margin-bottom:8px}
+.proof-overlay h3{font-size:28px;line-height:1.05;letter-spacing:-.035em;margin:0 0 8px}
+.proof-overlay p{margin:0;color:#aaa4b7;font-size:14px;line-height:1.55;max-width:560px}
+.proof-note{position:absolute;left:18px;top:18px;padding:9px 12px;border-radius:999px;background:rgba(10,8,19,.78);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16);font-size:11px;font-weight:800;letter-spacing:.05em}
+@media(max-width:980px){
+ .proof-head{grid-template-columns:1fr;gap:22px}
+ .proof-head p{justify-self:start}
+ .proof-grid{grid-template-columns:1fr}
+ .proof-card{min-height:0}
+ .proof-card.tall{max-height:720px}
+ .proof-card.tall img{aspect-ratio:4/5;object-fit:cover}
+}
+@media(max-width:600px){
+ .proof-card{border-radius:20px}
+ .proof-overlay{padding:64px 20px 20px}
+ .proof-overlay h3{font-size:24px}
+ .proof-note{left:12px;top:12px}
+}
 
 /* requirements */
 .requirements{background:#100d18;color:#fff}
@@ -699,22 +713,36 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
   </div>
 </section>
 
-<section class="section proof" id="testaufbau">
-  <div class="wrap proof-grid">
-    <div class="proof-media">
-      <img src="./Interaktiver%20Pong-Spieltisch%20im%20modernen%20Spielzimmer.png" alt="Touch-Frame Testaufbau mit einer Pingpong-Anwendung auf einer großen interaktiven Bildfläche" loading="lazy">
-      <div class="proof-badge">INTERAKTIVE ANWENDUNG</div>
-    </div>
-    <div class="proof-copy">
-      <div class="kicker" style="color:#817b92">Praxisbeispiel</div>
-      <h2 class="section-title">Pingpong direkt auf der Bildfläche.</h2>
-      <p>Der Aufbau zeigt, wie sich eine große Bildfläche direkt als Spielfeld nutzen lässt. Touch-Frame erfasst die Eingaben über die gesamte Fläche.</p>
-      <div class="proof-points">
-        <span>Großformat</span>
-        <span>Direkte Touch-Eingabe</span>
-        <span>Spiel & Interaktion</span>
+<section class="section proof" id="praxis">
+  <div class="wrap">
+    <div class="proof-head">
+      <div>
+        <div class="kicker" style="color:#817b92">Anwendungen</div>
+        <h2 class="section-title">Touch-Frame auf unterschiedlichen Formaten.</h2>
       </div>
-      <p class="proof-caption">Darstellung auf Basis eines realen Touch-Frame-Aufbaus.</p>
+      <p>Die Touch-Funktion lässt sich an unterschiedliche Bildflächen anpassen – von großformatigen Spielflächen bis zum vertikalen Display.</p>
+    </div>
+
+    <div class="proof-grid">
+      <article class="proof-card wide">
+        <img src="./Interaktiver%20Pong-Spieltisch%20im%20modernen%20Spielzimmer.png" alt="Großformatige Touch-Frame Anwendung mit Pingpong-Spiel" loading="lazy">
+        <div class="proof-note">GROSSFORMAT</div>
+        <div class="proof-overlay">
+          <div class="proof-label">Spiel & Interaktion</div>
+          <h3>Pingpong direkt auf der Bildfläche.</h3>
+          <p>Eine große Bildfläche wird zum Spielfeld und reagiert direkt auf Eingaben.</p>
+        </div>
+      </article>
+
+      <article class="proof-card tall">
+        <img src="./Interaktiver%20digitaler%20Rollup%20im%20Showroom.png" alt="Digital Rollup als vertikales interaktives Touch-Display" loading="lazy">
+        <div class="proof-note">VERTIKALES DISPLAY</div>
+        <div class="proof-overlay">
+          <div class="proof-label">Information & Bedienung</div>
+          <h3>Digital Rollup mit Touch.</h3>
+          <p>Produkte, Informationen, Videos oder Anwendungen direkt am Display bedienen.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
