@@ -160,6 +160,54 @@ border-radius:18px;overflow:hidden}
 .compat-line{display:flex;flex-wrap:wrap;gap:9px}
 .compat-line span{border:1px solid var(--line-dark);padding:9px 13px;border-radius:999px;font-size:12px;font-weight:700;background:#fff}
 
+/* project check */
+.project-check{background:#f7f5ff;color:#101017;position:relative;overflow:hidden}
+.project-check:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-220px;top:-180px;background:rgba(139,108,255,.10);filter:blur(110px)}
+.check-grid{position:relative;z-index:2;display:grid;grid-template-columns:.82fr 1.18fr;gap:84px;align-items:start}
+.check-copy{position:sticky;top:110px}
+.check-copy .section-title{max-width:590px}
+.check-copy p{color:#6e6878;max-width:560px;margin:24px 0 0;font-size:18px;line-height:1.65}
+.check-card{background:#fff;border:1px solid #ddd8e7;border-radius:28px;padding:34px;box-shadow:0 24px 70px rgba(18,14,29,.07)}
+.check-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.check-field{display:flex;flex-direction:column;gap:8px}
+.check-field.full{grid-column:1/-1}
+.check-field label{font-size:12px;font-weight:800;letter-spacing:.02em;color:#4e4858}
+.check-field input,.check-field select,.check-field textarea{width:100%;border:1px solid #d7d1e1;border-radius:14px;background:#fbfaff;color:#17131c;padding:14px 15px;min-height:50px;outline:none;transition:border .18s,box-shadow .18s}
+.check-field textarea{min-height:110px;resize:vertical}
+.check-field input:focus,.check-field select:focus,.check-field textarea:focus{border-color:#8b6cff;box-shadow:0 0 0 4px rgba(139,108,255,.10)}
+.check-actions{display:flex;align-items:center;justify-content:space-between;gap:18px;grid-column:1/-1;margin-top:4px}
+.check-note{font-size:12px;color:#7a7382;max-width:360px}
+.check-submit{border:0}
+.check-status{grid-column:1/-1;font-size:13px;color:#5e5867;min-height:20px}
+.check-trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.check-trust span{font-size:11px;font-weight:800;padding:9px 12px;border-radius:999px;border:1px solid #ded8e8;background:#fff;color:#5d5668}
+
+/* requirements */
+.requirements{background:#100d18;color:#fff}
+.requirements-head{display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:end;margin-bottom:54px}
+.requirements-head p{color:#9d96a9;max-width:550px;justify-self:end;margin:0}
+.requirement-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.requirement-card{border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:24px;background:rgba(255,255,255,.025)}
+.requirement-card strong{display:block;font-size:17px;margin-bottom:8px}
+.requirement-card span{display:block;color:#928b9d;font-size:13px;line-height:1.55}
+.requirement-dot{width:10px;height:10px;border-radius:50%;margin-bottom:46px;background:linear-gradient(135deg,var(--lime),var(--cyan),var(--pink));box-shadow:0 0 20px rgba(85,233,255,.22)}
+
+@media(max-width:980px){
+ .check-grid{grid-template-columns:1fr;gap:38px}
+ .check-copy{position:static}
+ .requirements-head{grid-template-columns:1fr;gap:24px}
+ .requirements-head p{justify-self:start}
+ .requirement-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+ .check-form{grid-template-columns:1fr}
+ .check-card{padding:24px 20px}
+ .check-field.full,.check-actions{grid-column:auto}
+ .check-actions{align-items:stretch;flex-direction:column}
+ .check-actions .button{width:100%}
+ .requirement-grid{grid-template-columns:1fr}
+}
+
 /* use cases */
 .playground{background:#0d0a17;position:relative;overflow:hidden}
 .playground:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:rgba(139,108,255,.12);filter:blur(120px);right:-220px;top:110px}
@@ -423,7 +471,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
       <p>LED-Wand, Display, Videowall oder Projektion: Touch-Frame ergänzt die Bildfläche um direkte Interaktion. Tippen, wischen, auswählen oder spielen.</p>
       <div class="hero-actions">
         <a class="button primary" href="#anwendungen">Anwendungen ansehen <span>↗</span></a>
-        <a class="button secondary" href="mailto:kontakt@pixelgold.de?subject=Touch-Frame%20Projektanfrage">Projekt besprechen</a>
+        <a class="button secondary" href="#projektcheck">Projekt prüfen</a>
       </div>
       <div class="hero-note"><span>●</span> Für vorhandene Bildflächen oder als komplette Lösung mit Pixelgold.</div>
     </div>
@@ -481,6 +529,71 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
       <div class="compat-line" aria-label="Geeignete Anwendungsflächen">
         <span>LED-Wände</span><span>Projektionen</span><span>Displays</span><span>Videowalls</span><span>Sonderformate</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section project-check" id="projektcheck">
+  <div class="wrap check-grid">
+    <div class="check-copy">
+      <div class="kicker">Passt Touch-Frame zu deiner Fläche?</div>
+      <h2 class="section-title">In zwei Minuten grob prüfen.</h2>
+      <p>Schick uns Bildtyp, Größe und Einsatz. Wir können damit schnell einschätzen, wie wir Touch-Frame für dein Projekt aufbauen würden.</p>
+      <div class="check-trust">
+        <span>LED-Wand</span><span>Display</span><span>Videowall</span><span>Projektion</span>
+      </div>
+    </div>
+
+    <div class="check-card">
+      <form class="check-form" id="projectCheck">
+        <div class="check-field">
+          <label for="medium">Bildfläche</label>
+          <select id="medium" name="medium" required>
+            <option value="">Bitte auswählen</option>
+            <option>LED-Wand</option>
+            <option>Display</option>
+            <option>Videowall</option>
+            <option>Projektion</option>
+            <option>Sonstiges / noch offen</option>
+          </select>
+        </div>
+
+        <div class="check-field">
+          <label for="usage">Einsatz</label>
+          <select id="usage" name="usage" required>
+            <option value="">Bitte auswählen</option>
+            <option>Temporär / Event / Messe</option>
+            <option>Dauerhaft / Installation</option>
+            <option>Noch offen</option>
+          </select>
+        </div>
+
+        <div class="check-field">
+          <label for="width">Breite in cm</label>
+          <input id="width" name="width" type="number" inputmode="decimal" min="1" step="0.1" placeholder="z. B. 400">
+        </div>
+
+        <div class="check-field">
+          <label for="height">Höhe in cm</label>
+          <input id="height" name="height" type="number" inputmode="decimal" min="1" step="0.1" placeholder="z. B. 225">
+        </div>
+
+        <div class="check-field full">
+          <label for="application">Was soll auf der Fläche passieren?</label>
+          <textarea id="application" name="application" placeholder="z. B. Produktkonfigurator, Spiel, Navigation, Abstimmung, Präsentation ..."></textarea>
+        </div>
+
+        <div class="check-field full">
+          <label for="location">Ort / Einsatzort</label>
+          <input id="location" name="location" type="text" placeholder="z. B. Messe Köln, Showroom Paderborn">
+        </div>
+
+        <div class="check-actions">
+          <div class="check-note">Der Check verschickt noch nichts automatisch. Er öffnet eine vorbereitete E-Mail mit deinen Angaben.</div>
+          <button class="button primary check-submit" type="submit">Projekt prüfen lassen ↗</button>
+        </div>
+        <div class="check-status" id="checkStatus" aria-live="polite"></div>
+      </form>
     </div>
   </div>
 </section>
@@ -570,6 +683,25 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
   </div>
 </section>
 
+<section class="section requirements">
+  <div class="wrap">
+    <div class="requirements-head">
+      <div>
+        <div class="kicker" style="color:#817b92">Was wir für die Auslegung brauchen</div>
+        <h2 class="section-title">Vier Dinge reichen für den Start.</h2>
+      </div>
+      <p class="lead">Wir müssen im ersten Schritt nicht jedes technische Detail kennen. Mit diesen Angaben können wir die Richtung sauber einschätzen.</p>
+    </div>
+
+    <div class="requirement-grid">
+      <div class="requirement-card"><div class="requirement-dot"></div><strong>Bildfläche</strong><span>LED-Wand, Display, Videowall oder Projektion.</span></div>
+      <div class="requirement-card"><div class="requirement-dot"></div><strong>Maße</strong><span>Breite und Höhe der sichtbaren bzw. geplanten Fläche.</span></div>
+      <div class="requirement-card"><div class="requirement-dot"></div><strong>Einsatz</strong><span>Temporär für Event/Messe oder dauerhaft installiert.</span></div>
+      <div class="requirement-card"><div class="requirement-dot"></div><strong>Anwendung</strong><span>Was Nutzer auf der Fläche auswählen, steuern oder spielen sollen.</span></div>
+    </div>
+  </div>
+</section>
+
 <section class="section how" id="so-gehts">
   <div class="wrap">
     <div class="how-head">
@@ -643,7 +775,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
 
       <div class="cross-links">
         <a class="button primary" href="https://pixelgold-visuals.de/" target="_blank" rel="noopener">LED-Wand mit anfragen ↗</a>
-        <a class="button secondary" href="mailto:kontakt@pixelgold.de?subject=Touch-Frame%20Projektanfrage">Nur Touch-Frame anfragen</a>
+        <a class="button secondary" href="#projektcheck">Nur Touch-Frame prüfen</a>
       </div>
       <div class="pixelgold-note">Pixelgold übernimmt auf Wunsch Planung, LED-Technik, Lieferung und Aufbau.</div>
     </div>
@@ -669,7 +801,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
     <div>
       <p>Du hast eine Bildfläche oder eine Idee für eine interaktive Anwendung? Wir schauen gemeinsam, wie Touch-Frame dazu passt.</p>
       <div class="hero-actions">
-        <a class="button" href="mailto:kontakt@pixelgold.de?subject=Touch-Frame%20Projektanfrage">Touch-Projekt anfragen</a>
+        <a class="button" href="#projektcheck">Projekt prüfen</a>
         <a class="button secondary-dark" href="tel:+4952515449191">+49 (0) 5251 544 91 91</a>
       </div>
     </div>
@@ -806,6 +938,44 @@ stage.addEventListener("pointerdown",function(ev){
 });
 stage.addEventListener("pointerup",function(){drawing=false;ring.style.width="52px";ring.style.height="52px";});
 stage.addEventListener("pointercancel",function(){drawing=false;});
+const projectCheck=document.getElementById("projectCheck");
+const checkStatus=document.getElementById("checkStatus");
+if(projectCheck){
+  projectCheck.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    const data=new FormData(projectCheck);
+    const medium=(data.get("medium")||"").toString().trim();
+    const usage=(data.get("usage")||"").toString().trim();
+    if(!medium || !usage){
+      checkStatus.textContent="Bitte Bildfläche und Einsatz auswählen.";
+      return;
+    }
+    const width=(data.get("width")||"").toString().trim();
+    const height=(data.get("height")||"").toString().trim();
+    const application=(data.get("application")||"").toString().trim();
+    const location=(data.get("location")||"").toString().trim();
+    const subject="Touch-Frame Projekt-Check";
+    const body=[
+      "Hallo Pixelgold / Touch-Frame,",
+      "",
+      "ich möchte ein Touch-Frame Projekt prüfen lassen.",
+      "",
+      "Bildfläche: "+medium,
+      "Einsatz: "+usage,
+      "Breite: "+(width ? width+" cm" : "noch offen"),
+      "Höhe: "+(height ? height+" cm" : "noch offen"),
+      "Ort: "+(location || "noch offen"),
+      "",
+      "Anwendung:",
+      application || "noch offen",
+      "",
+      "Bitte gebt mir eine erste Einschätzung.",
+    ].join("\n");
+    checkStatus.textContent="E-Mail wird vorbereitet …";
+    window.location.href="mailto:kontakt@pixelgold.de?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  });
+}
+
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 </body>
