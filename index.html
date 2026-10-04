@@ -61,10 +61,10 @@ header{position:absolute;z-index:50;left:0;right:0;top:0;border-bottom:1px solid
 /* global */
 h1,h2,h3,p{margin-top:0}
 h1,h2,h3{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
-.section{padding:118px 0}
+.section{padding:92px 0}
 .kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;font-size:11px;font-weight:700;letter-spacing:.13em;color:#797489;margin-bottom:18px}
 .kicker:before{content:"";width:28px;height:3px;background:linear-gradient(90deg,var(--pink),var(--cyan))}
-.section-title{font-size:clamp(48px,5.7vw,86px);line-height:.93;letter-spacing:-.055em;margin:0}
+.section-title{font-size:clamp(42px,4.7vw,72px);line-height:.96;letter-spacing:-.05em;margin:0}
 .lead{font-size:19px;line-height:1.6}
 .button{min-height:54px;padding:14px 22px;border-radius:999px;border:1px solid transparent;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:750;font-size:14px;transition:transform .18s,background .18s,border .18s,box-shadow .18s}
 .button:hover{transform:translateY(-2px)}
@@ -155,259 +155,127 @@ border-radius:18px;overflow:hidden}
 
 /* statement */
 .statement{background:var(--paper);color:var(--ink)}
-.statement-grid{display:grid;grid-template-columns:.94fr 1.06fr;gap:110px;align-items:end}
-.statement .section-title{max-width:690px}
+.statement-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:76px;align-items:center}
+.statement .section-title{max-width:620px}
 .statement-copy{max-width:650px;justify-self:end}
-.statement-copy p{color:#696474;margin-bottom:26px}
+.statement-copy p{color:#696474;margin-bottom:22px}
 .compat-line{display:flex;flex-wrap:wrap;gap:9px}
 .compat-line span{border:1px solid var(--line-dark);padding:9px 13px;border-radius:999px;font-size:12px;font-weight:700;background:#fff}
 
-/* project check */
-.project-check{background:#f7f5ff;color:#101017;position:relative;overflow:hidden}
-.project-check:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-220px;top:-180px;background:rgba(139,108,255,.10);filter:blur(110px)}
-.check-grid{position:relative;z-index:2;display:grid;grid-template-columns:.82fr 1.18fr;gap:84px;align-items:start}
-.check-copy{position:sticky;top:110px}
-.check-copy .section-title{max-width:590px}
-.check-copy p{color:#6e6878;max-width:560px;margin:24px 0 0;font-size:18px;line-height:1.65}
-.check-card{background:#fff;border:1px solid #ddd8e7;border-radius:28px;padding:34px;box-shadow:0 24px 70px rgba(18,14,29,.07)}
-.check-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.check-field{display:flex;flex-direction:column;gap:8px}
-.check-field.full{grid-column:1/-1}
-.check-field label{font-size:12px;font-weight:800;letter-spacing:.02em;color:#4e4858}
-.check-field input,.check-field select,.check-field textarea{width:100%;border:1px solid #d7d1e1;border-radius:14px;background:#fbfaff;color:#17131c;padding:14px 15px;min-height:50px;outline:none;transition:border .18s,box-shadow .18s}
-.check-field textarea{min-height:110px;resize:vertical}
-.check-field input:focus,.check-field select:focus,.check-field textarea:focus{border-color:#8b6cff;box-shadow:0 0 0 4px rgba(139,108,255,.10)}
-.check-actions{display:flex;align-items:center;justify-content:space-between;gap:18px;grid-column:1/-1;margin-top:4px}
-.check-note{font-size:12px;color:#7a7382;max-width:360px}
-.check-submit{border:0}
-.check-status{grid-column:1/-1;font-size:13px;color:#5e5867;min-height:20px}
-.check-trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-.check-trust span{font-size:11px;font-weight:800;padding:9px 12px;border-radius:999px;border:1px solid #ded8e8;background:#fff;color:#5d5668}
-
 /* application proof */
 .proof{background:#0b0912;color:#fff;position:relative;overflow:hidden}
-.proof:before{content:"";position:absolute;inset:auto -120px -220px auto;width:560px;height:560px;border-radius:50%;background:rgba(85,233,255,.08);filter:blur(110px)}
-.proof-head{position:relative;z-index:2;display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:end;margin-bottom:48px}
-.proof-head p{margin:0;color:#9f99aa;max-width:560px;justify-self:end;font-size:18px;line-height:1.65}
-.proof-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .72fr .9fr;gap:16px;align-items:stretch;max-width:1240px;margin:0 auto}
-.proof-card{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:24px;overflow:hidden;background:#12101b;height:410px}
-.proof-card img{display:block;width:100%;height:100%;object-fit:cover}
-.proof-card.wide img{object-position:center center}
-.proof-card.tall img{object-position:center 35%}
-.proof-card.extra img{object-position:center center}
-.proof-overlay{position:absolute;left:0;right:0;bottom:0;padding:80px 28px 26px;background:linear-gradient(to top,rgba(7,6,11,.96),rgba(7,6,11,.72) 52%,transparent)}
-.proof-label{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#a59fac;margin-bottom:8px}
-.proof-overlay h3{font-size:28px;line-height:1.05;letter-spacing:-.035em;margin:0 0 8px}
-.proof-overlay p{margin:0;color:#aaa4b7;font-size:14px;line-height:1.55;max-width:560px}
-.proof-note{position:absolute;left:18px;top:18px;padding:9px 12px;border-radius:999px;background:rgba(10,8,19,.78);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16);font-size:11px;font-weight:800;letter-spacing:.05em}
+.proof:before{content:"";position:absolute;inset:auto -120px -220px auto;width:520px;height:520px;border-radius:50%;background:rgba(85,233,255,.07);filter:blur(110px)}
+.proof-head{position:relative;z-index:2;display:grid;grid-template-columns:1fr .75fr;gap:58px;align-items:end;margin-bottom:38px}
+.proof-head p{margin:0;color:#9f99aa;max-width:520px;justify-self:end;font-size:17px;line-height:1.6}
+.proof-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .78fr .94fr;gap:16px;max-width:1260px}
+.proof-card{border:1px solid rgba(255,255,255,.12);border-radius:22px;overflow:hidden;background:#13101a;min-width:0}
+.proof-image{position:relative;height:260px;overflow:hidden;background:#17131f}
+.proof-image img{width:100%;height:100%;object-fit:cover}
+.proof-card.wide .proof-image img{object-position:center center}
+.proof-card.tall .proof-image img{object-position:center 28%}
+.proof-card.extra .proof-image img{object-position:center center}
+.proof-note{position:absolute;left:14px;top:14px;padding:8px 11px;border-radius:999px;background:rgba(10,8,19,.78);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);font-size:10px;font-weight:800;letter-spacing:.06em}
+.proof-copy{padding:20px 22px 22px}
+.proof-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#888193;margin-bottom:8px}
+.proof-copy h3{font-size:24px;line-height:1.08;letter-spacing:-.035em;margin:0 0 8px}
+.proof-copy p{margin:0;color:#9992a4;font-size:13px;line-height:1.5}
+
+/* project check */
+.project-check{background:#f7f5ff;color:#101017;position:relative;overflow:hidden}
+.project-check:before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;right:-180px;top:-180px;background:rgba(139,108,255,.09);filter:blur(110px)}
+.check-grid{position:relative;z-index:2;display:grid;grid-template-columns:.78fr 1.22fr;gap:64px;align-items:center}
+.check-copy .section-title{max-width:540px}
+.check-copy p{color:#6e6878;max-width:520px;margin:20px 0 0;font-size:17px;line-height:1.6}
+.check-trust{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.check-trust span{font-size:10px;font-weight:800;padding:8px 11px;border-radius:999px;border:1px solid #ded8e8;background:#fff;color:#5d5668}
+.check-card{background:#fff;border:1px solid #ddd8e7;border-radius:24px;padding:28px;box-shadow:0 20px 58px rgba(18,14,29,.06)}
+.check-form{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.check-field{display:flex;flex-direction:column;gap:7px}
+.check-field.full{grid-column:1/-1}
+.check-field label{font-size:11px;font-weight:800;letter-spacing:.02em;color:#4e4858}
+.check-field input,.check-field select,.check-field textarea{width:100%;border:1px solid #d7d1e1;border-radius:13px;background:#fbfaff;color:#17131c;padding:12px 14px;min-height:48px;outline:none;transition:border .18s,box-shadow .18s}
+.check-field textarea{min-height:88px;resize:vertical}
+.check-field input:focus,.check-field select:focus,.check-field textarea:focus{border-color:#8b6cff;box-shadow:0 0 0 4px rgba(139,108,255,.10)}
+.check-actions{display:flex;align-items:center;justify-content:space-between;gap:16px;grid-column:1/-1;margin-top:2px}
+.check-note{font-size:11px;color:#7a7382;max-width:330px}
+.check-submit{border:0}
+.check-status{grid-column:1/-1;font-size:12px;color:#5e5867;min-height:18px}
+
 @media(max-width:980px){
- .proof-head{grid-template-columns:1fr;gap:22px}
+ .proof-head,.check-grid{grid-template-columns:1fr;gap:28px}
  .proof-head p{justify-self:start}
  .proof-grid{grid-template-columns:1fr 1fr}
- .proof-card{height:360px}
  .proof-card.wide{grid-column:1/-1}
- .proof-card.tall img{object-position:center 32%}
-}
-@media(max-width:600px){
- .proof-grid{grid-template-columns:1fr}
- .proof-card,.proof-card.wide{grid-column:auto;height:330px;border-radius:20px}
- .proof-overlay{padding:64px 20px 20px}
- .proof-overlay h3{font-size:24px}
- .proof-note{left:12px;top:12px}
-}
-
-/* requirements */
-.requirements{background:#100d18;color:#fff}
-.requirements-head{display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:end;margin-bottom:54px}
-.requirements-head p{color:#9d96a9;max-width:550px;justify-self:end;margin:0}
-.requirement-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.requirement-card{border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:24px;background:rgba(255,255,255,.025)}
-.requirement-card strong{display:block;font-size:17px;margin-bottom:8px}
-.requirement-card span{display:block;color:#928b9d;font-size:13px;line-height:1.55}
-.requirement-dot{width:10px;height:10px;border-radius:50%;margin-bottom:46px;background:linear-gradient(135deg,var(--lime),var(--cyan),var(--pink));box-shadow:0 0 20px rgba(85,233,255,.22)}
-
-@media(max-width:980px){
- .check-grid{grid-template-columns:1fr;gap:38px}
- .check-copy{position:static}
- .requirements-head{grid-template-columns:1fr;gap:24px}
- .requirements-head p{justify-self:start}
- .requirement-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:650px){
+ .proof-grid{grid-template-columns:1fr}
+ .proof-card.wide{grid-column:auto}
+ .proof-image{height:230px}
  .check-form{grid-template-columns:1fr}
- .check-card{padding:24px 20px}
+ .check-card{padding:22px 18px}
  .check-field.full,.check-actions{grid-column:auto}
  .check-actions{align-items:stretch;flex-direction:column}
  .check-actions .button{width:100%}
- .requirement-grid{grid-template-columns:1fr}
-}
-
-/* use cases */
-.playground{background:#0d0a17;position:relative;overflow:hidden}
-.playground:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:rgba(139,108,255,.12);filter:blur(120px);right:-220px;top:110px}
-.play-head{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end;margin-bottom:58px}
-.play-head p{color:#9993aa;max-width:540px;justify-self:end;margin:0}
-.scene-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-.scene-card{position:relative;min-height:390px;border:1px solid rgba(255,255,255,.12);border-radius:28px;overflow:hidden;background:#12101d;isolation:isolate;transition:transform .24s,border-color .24s}
-.scene-card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.27)}
-.scene-card.large{grid-column:span 7}
-.scene-card.medium{grid-column:span 5}
-.scene-card.third{grid-column:span 4}
-.scene-copy{position:absolute;left:28px;right:28px;bottom:27px;z-index:5}
-.scene-copy h3{font-size:30px;line-height:1;letter-spacing:-.04em;margin:0 0 8px}
-.scene-copy p{font-size:14px;color:#a19bad;max-width:430px;margin:0}
-.scene-label{position:absolute;left:26px;top:23px;z-index:6;font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:#8d879a}
-.scene-art{position:absolute;inset:0 0 105px;overflow:hidden}
-.scene-screen{position:absolute;border:1px solid rgba(255,255,255,.18);background:#171421;box-shadow:0 28px 70px rgba(0,0,0,.34)}
-.scene-screen:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:25px 25px;pointer-events:none}
-
-/* Messe */
-.trade .scene-art{background:radial-gradient(circle at 68% 35%,rgba(85,233,255,.18),transparent 30%),linear-gradient(150deg,#111421,#15101e)}
-.trade .scene-screen{left:9%;right:9%;top:19%;height:58%;border-radius:20px;background:linear-gradient(135deg,#18162b,#111926)}
-.trade .product-pill{position:absolute;z-index:3;padding:9px 12px;border-radius:999px;background:#fff;color:#111;font-size:11px;font-weight:800}
-.trade .p1{left:15%;top:28%}.trade .p2{left:38%;top:46%;background:var(--cyan)}.trade .p3{right:14%;top:31%;background:var(--pink)}
-.trade .touch-hand{position:absolute;z-index:4;right:24%;top:48%;width:56px;height:56px;border:2px solid var(--lime);border-radius:50%;box-shadow:0 0 0 10px rgba(216,255,62,.07),0 0 36px rgba(216,255,62,.22)}
-.trade .touch-hand:after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--lime);left:50%;top:50%;transform:translate(-50%,-50%)}
-
-/* Kids */
-.kids .scene-art{background:linear-gradient(145deg,#171126,#11101d)}
-.kids .bubble{position:absolute;border-radius:50%;display:grid;place-items:center;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:800;color:#111;box-shadow:0 16px 34px rgba(0,0,0,.2)}
-.kids .b1{width:86px;height:86px;background:var(--pink);left:13%;top:29%;font-size:15px}
-.kids .b2{width:58px;height:58px;background:var(--cyan);left:48%;top:22%;font-size:11px}
-.kids .b3{width:104px;height:104px;background:var(--lime);right:13%;top:40%;font-size:18px}
-.kids .b4{width:44px;height:44px;background:var(--orange);left:41%;top:58%;font-size:11px}
-.kids .score{position:absolute;right:24px;top:20px;font-size:11px;color:#837d90;text-transform:uppercase;letter-spacing:.12em}
-.kids .score b{font-size:18px;color:#fff;margin-left:7px}
-
-/* Showroom */
-.showroom .scene-art{background:linear-gradient(155deg,#10131c,#171121)}
-.showroom .scene-screen{left:10%;right:10%;top:16%;height:64%;border-radius:18px;background:linear-gradient(145deg,#17182a,#10151d)}
-.showroom .car-shape{position:absolute;z-index:2;width:54%;height:35%;left:23%;top:34%;border-radius:48% 52% 34% 36% / 58% 56% 44% 42%;background:linear-gradient(135deg,var(--violet),#513ed7 56%,#262038);box-shadow:0 18px 40px rgba(0,0,0,.28)}
-.showroom .car-shape:before,.showroom .car-shape:after{content:"";position:absolute;bottom:-8px;width:23px;height:23px;border-radius:50%;background:#0a0813;border:5px solid #2a2633}
-.showroom .car-shape:before{left:13%}.showroom .car-shape:after{right:13%}
-.showroom .swatches{position:absolute;z-index:3;left:17%;bottom:17%;display:flex;gap:8px}
-.showroom .swatches i{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,.55)}
-.showroom .swatches i:nth-child(1){background:var(--violet)}.showroom .swatches i:nth-child(2){background:var(--pink)}.showroom .swatches i:nth-child(3){background:var(--lime)}.showroom .swatches i:nth-child(4){background:var(--cyan)}
-
-/* Firmenfeier */
-.party .scene-art{background:radial-gradient(circle at 50% 45%,rgba(255,92,200,.16),transparent 30%),linear-gradient(145deg,#161020,#10121a)}
-.party .poll{position:absolute;left:12%;right:12%;top:25%;display:grid;gap:11px}
-.party .poll-row{height:42px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.08)}
-.party .poll-row span{position:absolute;left:0;top:0;bottom:0;border-radius:999px}
-.party .poll-row:nth-child(1) span{width:76%;background:linear-gradient(90deg,var(--pink),#bf65ff)}
-.party .poll-row:nth-child(2) span{width:52%;background:linear-gradient(90deg,var(--cyan),#6d8dff)}
-.party .poll-row:nth-child(3) span{width:36%;background:linear-gradient(90deg,var(--lime),#72e596)}
-.party .poll-row b{position:absolute;z-index:2;left:16px;top:50%;transform:translateY(-50%);font-size:11px;color:#fff}
-
-/* Museum */
-.museum .scene-art{background:linear-gradient(145deg,#10141b,#17121c)}
-.museum .map{position:absolute;inset:19% 10% 15%;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:#121822}
-.museum .map:before{content:"";position:absolute;inset:0;background:
- radial-gradient(circle at 23% 34%,var(--cyan) 0 5px,transparent 6px),
- radial-gradient(circle at 68% 28%,var(--pink) 0 5px,transparent 6px),
- radial-gradient(circle at 47% 68%,var(--lime) 0 5px,transparent 6px),
- linear-gradient(28deg,transparent 47%,rgba(255,255,255,.08) 48% 50%,transparent 51%),
- linear-gradient(120deg,transparent 47%,rgba(255,255,255,.07) 48% 50%,transparent 51%);
- opacity:.9}
-.museum .pin{position:absolute;z-index:3;padding:8px 10px;border-radius:10px;background:#fff;color:#111;font-size:11px;font-weight:800}
-.museum .pin.one{left:19%;top:29%}.museum .pin.two{right:13%;top:48%;background:var(--lime)}
-
-/* Quick menu */
-.quickmenu .scene-art{background:linear-gradient(150deg,#131021,#10151c)}
-.quickmenu .menu-stack{position:absolute;left:12%;right:12%;top:18%;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.quickmenu .menu-tile{height:70px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);display:flex;align-items:center;padding:0 15px;font-size:11px;font-weight:800;color:#d7d2df}
-.quickmenu .menu-tile:nth-child(2){background:rgba(85,233,255,.13)}
-.quickmenu .menu-tile:nth-child(3){background:rgba(216,255,62,.11)}
-.quickmenu .menu-tile:nth-child(4){background:rgba(255,92,200,.12)}
-
-@media(max-width:980px){
- .scene-card.large,.scene-card.medium,.scene-card.third{grid-column:span 6}
-}
-@media(max-width:700px){
- .scene-grid{grid-template-columns:1fr}
- .scene-card.large,.scene-card.medium,.scene-card.third{grid-column:auto;min-height:360px}
- .scene-copy{left:22px;right:22px;bottom:22px}
- .scene-copy h3{font-size:27px}
 }
 
 /* how */
 .how{background:var(--paper);color:var(--ink)}
-.how-head{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:68px}
-.how-head p{justify-self:end;max-width:570px;color:#696474;margin:0}
-.steps{border-top:1px solid #d8d4e3}
-.step{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;padding:31px 0;border-bottom:1px solid #d8d4e3;align-items:start}
-.step h3{font-size:27px;letter-spacing:-.04em;margin:0}
-.step p{margin:0;color:#6e6878;max-width:690px}
+.how-head{display:grid;grid-template-columns:1fr .9fr;gap:58px;align-items:end;margin-bottom:46px}
+.how-head p{justify-self:end;max-width:550px;color:#696474;margin:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{border:1px solid #ddd9e6;border-radius:20px;padding:24px;background:#fff}
+.step h3{font-size:21px;letter-spacing:-.035em;margin:0 0 10px}
+.step p{margin:0;color:#6e6878;font-size:14px;line-height:1.55}
 .step em{font-style:normal;color:#101017;font-weight:700}
 
 /* pixelgold */
-.pixelgold{position:relative;background:#09070f;overflow:hidden;padding:132px 0}
+.pixelgold{position:relative;background:#09070f;overflow:hidden;padding:96px 0}
 .pixelgold:before{content:"";position:absolute;inset:0;background:
-  radial-gradient(circle at 18% 22%,rgba(216,255,62,.10),transparent 26%),
-  radial-gradient(circle at 82% 72%,rgba(85,233,255,.09),transparent 28%);
-pointer-events:none}
-.pixelgold-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:96px;align-items:center}
-.pg-visual{min-height:590px;position:relative}
-.pg-room{position:absolute;inset:0;border:1px solid rgba(255,255,255,.12);border-radius:34px;background:
-  linear-gradient(180deg,rgba(255,255,255,.025),transparent 38%),
-  linear-gradient(145deg,#121018,#0c0a11);
-overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.35)}
-.pg-room:before{content:"";position:absolute;left:0;right:0;bottom:0;height:33%;background:linear-gradient(180deg,transparent,#0f0d14 12%,#14111a)}
-.pg-wall{position:absolute;left:9%;right:9%;top:11%;height:57%;border:8px solid #2b2832;background:
-  radial-gradient(circle at 28% 30%,rgba(255,92,200,.85),transparent 22%),
-  radial-gradient(circle at 73% 64%,rgba(85,233,255,.78),transparent 24%),
-  linear-gradient(135deg,#24184a,#102631);
-box-shadow:0 28px 65px rgba(0,0,0,.45)}
-.pg-wall:before{content:"";position:absolute;inset:0;background-image:
-  linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
-background-size:26px 26px}
-.pg-wall-copy{position:absolute;z-index:3;left:8%;right:8%;top:50%;transform:translateY(-50%);text-align:center}
-.pg-wall-copy strong{display:block;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:clamp(31px,4.2vw,58px);letter-spacing:-.055em;line-height:.9}
-.pg-wall-copy span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#c0b9c9;margin-top:13px}
-.pg-touchpoint{position:absolute;z-index:4;right:21%;top:39%;width:62px;height:62px;border:2px solid var(--lime);border-radius:50%;box-shadow:0 0 0 11px rgba(216,255,62,.07),0 0 42px rgba(216,255,62,.28)}
-.pg-touchpoint:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--lime);left:50%;top:50%;transform:translate(-50%,-50%)}
-.pg-person{position:absolute;z-index:3;right:15%;bottom:7%;width:54px;height:145px}
-.pg-person:before{content:"";position:absolute;width:31px;height:31px;border-radius:50%;background:#2d2934;left:12px;top:0}
-.pg-person:after{content:"";position:absolute;width:54px;height:106px;border-radius:26px 26px 8px 8px;background:linear-gradient(180deg,#34303b,#24212a);left:0;bottom:0}
-.pg-floorline{position:absolute;left:10%;right:10%;bottom:18%;height:1px;background:rgba(255,255,255,.08)}
-.pg-badge{position:absolute;z-index:5;left:26px;bottom:24px;padding:10px 14px;border-radius:999px;background:var(--lime);color:#111;font-size:11px;font-weight:900;letter-spacing:.06em}
-.pg-badge.alt{left:auto;right:26px;background:#fff}
+ radial-gradient(circle at 18% 22%,rgba(216,255,62,.08),transparent 27%),
+ radial-gradient(circle at 82% 72%,rgba(85,233,255,.07),transparent 28%);pointer-events:none}
+.pixelgold-grid{position:relative;z-index:2;display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
+.pg-visual{min-height:440px}
+.pg-panel{height:100%;min-height:440px;border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;background:
+ radial-gradient(circle at 72% 30%,rgba(85,233,255,.18),transparent 28%),
+ radial-gradient(circle at 28% 72%,rgba(216,255,62,.14),transparent 25%),
+ linear-gradient(145deg,#16121f,#0c0a11);box-shadow:0 28px 80px rgba(0,0,0,.28)}
+.pg-mini{font-size:10px;font-weight:800;letter-spacing:.13em;color:#8e8798;text-transform:uppercase}
+.pg-panel strong{font-size:clamp(58px,7vw,96px);line-height:.82;letter-spacing:-.065em}
+.pg-panel-tags{display:flex;gap:8px;flex-wrap:wrap}
+.pg-panel-tags span{font-size:10px;font-weight:800;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 10px;color:#c0bac8;background:rgba(255,255,255,.03)}
 .pixelgold-copy .kicker{color:#807a8b}
-.pixelgold-copy .section-title{font-size:clamp(54px,5.3vw,82px);max-width:660px}
-.pixelgold-copy>.lead{color:#aaa3b4;margin:26px 0 34px;max-width:640px}
-.pg-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 30px}
-.pg-option{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035);border-radius:20px;padding:22px}
-.pg-option strong{display:block;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:18px;margin-bottom:6px}
-.pg-option span{display:block;color:#878190;font-size:13px;line-height:1.5}
-.pg-option.highlight{border-color:rgba(216,255,62,.28);background:rgba(216,255,62,.055)}
+.pixelgold-copy .section-title{font-size:clamp(46px,4.7vw,70px);max-width:760px}
+.pixelgold-copy>.lead{color:#aaa3b4;margin:22px 0 28px;max-width:660px}
+.pg-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 24px}
+.pg-option{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035);border-radius:18px;padding:20px}
+.pg-option strong{display:block;font-size:17px;margin-bottom:6px}
+.pg-option span{display:block;color:#878190;font-size:12px;line-height:1.5}
+.pg-option.highlight{border-color:rgba(216,255,62,.28);background:rgba(216,255,62,.05)}
 .pg-option.highlight strong{color:var(--lime)}
-.pg-checks{display:grid;gap:9px;margin:0 0 32px}
-.pg-check{display:flex;gap:11px;align-items:flex-start;color:#b6b0be;font-size:13px}
-.pg-check i{width:19px;height:19px;flex:0 0 19px;border-radius:50%;background:rgba(216,255,62,.12);color:var(--lime);display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:900;margin-top:1px}
-.cross-links{display:flex;gap:12px;flex-wrap:wrap}
-.pixelgold-note{margin-top:16px;color:#716b7a;font-size:11px}
+.pg-checks{display:grid;gap:8px;margin:0 0 26px}
+.pg-check{display:flex;gap:10px;align-items:flex-start;color:#b6b0be;font-size:12px}
+.pg-check i{width:18px;height:18px;flex:0 0 18px;border-radius:50%;background:rgba(216,255,62,.12);color:var(--lime);display:grid;place-items:center;font-style:normal;font-size:10px;font-weight:900;margin-top:1px}
+.cross-links{display:flex;gap:10px;flex-wrap:wrap}
+.pixelgold-note{margin-top:14px;color:#716b7a;font-size:10px}
 @media(max-width:1100px){
- .pixelgold-grid{grid-template-columns:1fr;gap:54px}
- .pg-visual{min-height:520px}
+ .pixelgold-grid{grid-template-columns:1fr;gap:36px}
+ .pg-visual{min-height:320px}
+ .pg-panel{min-height:320px}
 }
 @media(max-width:650px){
- .pixelgold{padding:92px 0}
- .pg-visual{min-height:390px}
- .pg-wall{left:7%;right:7%;top:10%;height:55%;border-width:5px}
- .pg-person{transform:scale(.82);transform-origin:bottom right;right:9%}
+ .pixelgold{padding:78px 0}
  .pg-options{grid-template-columns:1fr}
- .pg-badge.alt{display:none}
+ .pg-panel{min-height:280px;padding:24px}
 }
 
 /* audience */
 .audience{background:#181426;color:#fff}
-.audience-head{text-align:center;max-width:960px;margin:0 auto 54px}
+.audience-head{text-align:center;max-width:980px;margin:0 auto 36px}
 .audience-head .kicker{justify-content:center;color:#8f899c}
 .audience-head .kicker:before{display:none}
-.audience-head p{color:#a39daf;max-width:720px;margin:24px auto 0}
-.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:11px}
-.tags span{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.035);padding:11px 15px;border-radius:999px;color:#d6d1df;font-size:13px}
+.audience-head p{color:#a39daf;max-width:760px;margin:18px auto 0}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:9px}
+.tags span{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.035);padding:9px 13px;border-radius:999px;color:#d6d1df;font-size:12px}
 
 /* closing */
 .closing{background:var(--lime);color:#111;padding:100px 0}
@@ -431,13 +299,12 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
  .hero{min-height:auto}.hero-inner{min-height:auto}
  .hero-copy{max-width:860px}
  .touch-demo{height:560px;max-width:760px;width:100%;margin:0 auto}
- .statement-grid,.pixelgold-grid{grid-template-columns:1fr;gap:54px}
+ .statement-grid{grid-template-columns:1fr;gap:38px}
  .statement-copy{justify-self:start}
- .play-head,.how-head,.closing-grid{grid-template-columns:1fr;gap:28px}
- .play-head p,.how-head p{justify-self:start}
+ .how-head,.closing-grid{grid-template-columns:1fr;gap:28px}
+ .how-head p{justify-self:start}
  .benefits{grid-template-columns:1fr 1fr}
  .benefit:nth-child(2){border-right:0}.benefit:nth-child(3){padding-left:0}
- .step{grid-template-columns:.85fr 1.15fr}
 }
 @media(max-width:820px){
  .wrap{width:calc(100% - 34px)}
@@ -450,7 +317,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
  .touch-demo{height:440px}
  .demo-orbit{width:380px;height:380px}
  .touch-stage{border-radius:26px}
-  .step{grid-template-columns:1fr}.step p{grid-column:auto}
+ .steps{grid-template-columns:1fr}
  .footer-grid{flex-direction:column}
 }
 @media(max-width:560px){
@@ -500,7 +367,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
 <section class="hero" id="top">
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <div class="hero-eyebrow"><span class="live-dot"></span> Touch für LED, Display und Projektion</div>
+      <div class="hero-eyebrow"><span class="live-dot"></span> Touch für LED-Wände, Displays und Projektionen</div>
       <h1>MAKE ANY DISPLAY <span class="touch">TOUCH.</span></h1>
       <p>Touch-Frame macht LED-Wände, Displays, Videowalls und Projektionen direkt bedienbar. Tippen, wischen, auswählen oder spielen.</p>
       <div class="hero-actions">
@@ -556,13 +423,63 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
   <div class="wrap statement-grid">
     <div>
       <div class="kicker">Touch nachrüsten</div>
-      <h2 class="section-title">Nicht nur zeigen. Benutzen.</h2>
+      <h2 class="section-title">Nicht nur zeigen. Bedienen.</h2>
     </div>
     <div class="statement-copy">
-      <p class="lead">Mit Touch-Frame lassen sich LED-Wand, Display, Videowall oder Projektion direkt bedienen. Auswählen, steuern, verschieben, zeichnen oder spielen – direkt am Inhalt.</p>
+      <p class="lead">Touch-Frame ergänzt LED-Wände, Displays, Videowalls und Projektionen um direkte Touch-Eingabe. Bestehende Technik kann dabei weiter genutzt werden.</p>
       <div class="compat-line" aria-label="Geeignete Systeme">
-        <span>LED-Wände</span><span>Projektionen</span><span>Displays</span><span>Videowalls</span><span>Sonderformate</span>
+        <span>LED-Wände</span><span>Displays</span><span>Videowalls</span><span>Projektionen</span><span>Sonderformate</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section proof" id="anwendungen">
+  <div class="wrap">
+    <div class="proof-head">
+      <div>
+        <div class="kicker" style="color:#817b92">Anwendungen</div>
+        <h2 class="section-title">Touch-Frame im Einsatz.</h2>
+      </div>
+      <p>Je nach Projekt auf großem Screen, vertikalem Display oder Sonderformat.</p>
+    </div>
+
+    <div class="proof-grid">
+      <article class="proof-card wide">
+        <div class="proof-image">
+          <img src="./Interaktiver%20Pong-Spieltisch%20im%20modernen%20Spielzimmer.png" alt="Großformatige Touch-Frame Anwendung mit Pingpong-Spiel" loading="lazy">
+          <div class="proof-note">GROSSFORMAT</div>
+        </div>
+        <div class="proof-copy">
+          <div class="proof-label">Spiel & Interaktion</div>
+          <h3>Pingpong auf dem großen Screen.</h3>
+          <p>Der Screen wird zum Spielfeld und reagiert direkt auf Eingaben.</p>
+        </div>
+      </article>
+
+      <article class="proof-card tall">
+        <div class="proof-image">
+          <img src="./Interaktiver%20digitaler%20Rollup%20im%20Showroom.png" alt="Digital Rollup als vertikales interaktives Touch-Display" loading="lazy">
+          <div class="proof-note">VERTIKALES DISPLAY</div>
+        </div>
+        <div class="proof-copy">
+          <div class="proof-label">Information & Bedienung</div>
+          <h3>Digital Rollup mit Touch.</h3>
+          <p>Produkte, Informationen und Videos direkt am Display bedienen.</p>
+        </div>
+      </article>
+
+      <article class="proof-card extra">
+        <div class="proof-image">
+          <img src="./ChatGPT-Bild%204.%20Okt.%202026,%2012_45_51.png" alt="Touch-Frame Anwendung auf einer Messe" loading="lazy">
+          <div class="proof-note">MESSE & SHOWROOM</div>
+        </div>
+        <div class="proof-copy">
+          <div class="proof-label">Produktpräsentation</div>
+          <h3>Produkte direkt konfigurieren.</h3>
+          <p>Varianten, Optionen und Inhalte direkt am Screen auswählen.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -571,8 +488,8 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
   <div class="wrap check-grid">
     <div class="check-copy">
       <div class="kicker">Projekt prüfen</div>
-      <h2 class="section-title">Passt Touch-Frame zu deinem Projekt?</h2>
-      <p>Sag uns, ob du eine LED-Wand, ein Display, eine Videowall oder eine Projektion nutzt, welche Größe geplant ist und was darauf passieren soll. Dann können wir dir sagen, wie wir Touch-Frame dafür auslegen.</p>
+      <h2 class="section-title">Was habt ihr vor?</h2>
+      <p>Nenn uns System, Maße und Anwendung. Damit können wir einschätzen, wie Touch-Frame für das Projekt ausgelegt werden muss.</p>
       <div class="check-trust">
         <span>LED-Wand</span><span>Display</span><span>Videowall</span><span>Projektion</span>
       </div>
@@ -581,7 +498,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
     <div class="check-card">
       <form class="check-form" id="projectCheck">
         <div class="check-field">
-          <label for="medium">LED / Display / Projektion</label>
+          <label for="medium">System</label>
           <select id="medium" name="medium" required>
             <option value="">Bitte auswählen</option>
             <option>LED-Wand</option>
@@ -591,7 +508,6 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
             <option>Sonstiges / noch offen</option>
           </select>
         </div>
-
         <div class="check-field">
           <label for="usage">Einsatz</label>
           <select id="usage" name="usage" required>
@@ -601,27 +517,22 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
             <option>Noch offen</option>
           </select>
         </div>
-
         <div class="check-field">
           <label for="width">Breite in cm</label>
           <input id="width" name="width" type="number" inputmode="decimal" min="1" step="0.1" placeholder="z. B. 400">
         </div>
-
         <div class="check-field">
           <label for="height">Höhe in cm</label>
           <input id="height" name="height" type="number" inputmode="decimal" min="1" step="0.1" placeholder="z. B. 225">
         </div>
-
         <div class="check-field full">
           <label for="application">Was soll die Anwendung können?</label>
           <textarea id="application" name="application" placeholder="z. B. Produktkonfigurator, Spiel, Navigation, Abstimmung, Präsentation ..."></textarea>
         </div>
-
         <div class="check-field full">
           <label for="location">Ort / Einsatzort</label>
           <input id="location" name="location" type="text" placeholder="z. B. Messe Köln, Showroom Paderborn">
         </div>
-
         <div class="check-actions">
           <div class="check-note">Beim Absenden öffnet sich eine E-Mail mit deinen Angaben.</div>
           <button class="button primary check-submit" type="submit">Projekt prüfen lassen ↗</button>
@@ -632,180 +543,27 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
   </div>
 </section>
 
-<section class="section playground" id="anwendungen">
-  <div class="wrap">
-    <div class="play-head">
-      <div>
-        <div class="kicker" style="color:#817b92">Wo Touch sinnvoll wird</div>
-        <h2 class="section-title">Für Messe, Event, Showroom und mehr.</h2>
-      </div>
-      <p class="lead">Touch-Frame eignet sich überall dort, wo Besucher selbst auswählen, ausprobieren oder steuern sollen.</p>
-    </div>
-
-    <div class="scene-grid">
-      <article class="scene-card large trade">
-        <div class="scene-label">Messe & Event</div>
-        <div class="scene-art">
-          <div class="scene-screen"></div>
-          <span class="product-pill p1">Produkt A</span>
-          <span class="product-pill p2">Variante wählen</span>
-          <span class="product-pill p3">Mehr erfahren</span>
-          <span class="touch-hand" aria-hidden="true"></span>
-        </div>
-        <div class="scene-copy">
-          <h3>Selbst auswählen.</h3>
-          <p>Produkte auswählen, Varianten vergleichen, Spiele starten oder Inhalte direkt am Stand bedienen.</p>
-        </div>
-      </article>
-
-      <article class="scene-card medium kids">
-        <div class="scene-label">Kinder & Spiele</div>
-        <div class="scene-art">
-          <div class="score">Treffer <b>12</b></div>
-          <div class="bubble b1">TAP</div>
-          <div class="bubble b2">+1</div>
-          <div class="bubble b3">GO!</div>
-          <div class="bubble b4">WOW</div>
-        </div>
-        <div class="scene-copy">
-          <h3>Groß spielen.</h3>
-          <p>Reaktionsspiele, Quiz, Lernanwendungen oder eigene Spielideen im Großformat.</p>
-        </div>
-      </article>
-
-      <article class="scene-card third showroom">
-        <div class="scene-label">Showroom</div>
-        <div class="scene-art">
-          <div class="scene-screen"></div>
-          <div class="car-shape"></div>
-          <div class="swatches"><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="scene-copy">
-          <h3>Produkte auswählen.</h3>
-          <p>Varianten, Farben oder Ausstattungen direkt am Display auswählen.</p>
-        </div>
-      </article>
-
-      <article class="scene-card third party">
-        <div class="scene-label">Firmenfeier</div>
-        <div class="scene-art">
-          <div class="poll">
-            <div class="poll-row"><span></span><b>Team Blau</b></div>
-            <div class="poll-row"><span></span><b>Team Grün</b></div>
-            <div class="poll-row"><span></span><b>Team Rot</b></div>
-          </div>
-        </div>
-        <div class="scene-copy">
-          <h3>Alle machen mit.</h3>
-          <p>Abstimmungen, Spiele oder kleine Team-Aktionen statt nur einer Leinwand zum Zuschauen.</p>
-        </div>
-      </article>
-
-      <article class="scene-card third museum">
-        <div class="scene-label">Museum & Ausstellung</div>
-        <div class="scene-art">
-          <div class="map"></div>
-          <span class="pin one">Raum A</span>
-          <span class="pin two">Mehr Infos</span>
-        </div>
-        <div class="scene-copy">
-          <h3>Inhalte selbst entdecken.</h3>
-          <p>Karten, Zeitlinien, Informationen oder Exponate direkt am Screen bedienen.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section proof" id="praxis">
-  <div class="wrap">
-    <div class="proof-head">
-      <div>
-        <div class="kicker" style="color:#817b92">Anwendungen</div>
-        <h2 class="section-title">Touch-Frame auf unterschiedlichen Formaten.</h2>
-      </div>
-      <p>Touch-Frame lässt sich an unterschiedliche Formate anpassen – vom großformatigen Spielaufbau bis zum vertikalen Display.</p>
-    </div>
-
-    <div class="proof-grid">
-      <article class="proof-card wide">
-        <img src="./Interaktiver%20Pong-Spieltisch%20im%20modernen%20Spielzimmer.png" alt="Großformatige Touch-Frame Anwendung mit Pingpong-Spiel" loading="lazy">
-        <div class="proof-note">GROSSFORMAT</div>
-        <div class="proof-overlay">
-          <div class="proof-label">Spiel & Interaktion</div>
-          <h3>Pingpong auf dem großen Screen.</h3>
-          <p>Der Screen wird zum Spielfeld und reagiert direkt auf Eingaben.</p>
-        </div>
-      </article>
-
-      <article class="proof-card tall">
-        <img src="./Interaktiver%20digitaler%20Rollup%20im%20Showroom.png" alt="Digital Rollup als vertikales interaktives Touch-Display" loading="lazy">
-        <div class="proof-note">VERTIKALES DISPLAY</div>
-        <div class="proof-overlay">
-          <div class="proof-label">Information & Bedienung</div>
-          <h3>Digital Rollup mit Touch.</h3>
-          <p>Produkte, Informationen, Videos oder Anwendungen direkt am Display bedienen.</p>
-        </div>
-      </article>
-
-      <article class="proof-card extra">
-        <img src="./ChatGPT-Bild%204.%20Okt.%202026,%2012_45_51.png" alt="Weitere Touch-Frame Anwendung im Einsatz" loading="lazy">
-        <div class="proof-note">ANWENDUNG</div>
-        <div class="proof-overlay">
-          <div class="proof-label">Touch im Einsatz</div>
-          <h3>Direkt bedienen.</h3>
-          <p>Touch-Frame lässt sich für unterschiedliche Inhalte und Einsatzzwecke aufbauen.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section requirements">
-  <div class="wrap">
-    <div class="requirements-head">
-      <div>
-        <div class="kicker" style="color:#817b92">Das brauchen wir von dir</div>
-        <h2 class="section-title">Format, Maße, Einsatz, Anwendung.</h2>
-      </div>
-      <p class="lead">Mit diesen Angaben können wir schon prüfen, wie wir Touch-Frame für dein Projekt auslegen müssen.</p>
-    </div>
-
-    <div class="requirement-grid">
-      <div class="requirement-card"><div class="requirement-dot"></div><strong>Format</strong><span>LED-Wand, Display, Videowall oder Projektion.</span></div>
-      <div class="requirement-card"><div class="requirement-dot"></div><strong>Maße</strong><span>Breite und Höhe des vorhandenen oder geplanten Systems.</span></div>
-      <div class="requirement-card"><div class="requirement-dot"></div><strong>Einsatz</strong><span>Temporär für Event/Messe oder dauerhaft installiert.</span></div>
-      <div class="requirement-card"><div class="requirement-dot"></div><strong>Anwendung</strong><span>Was Nutzer auswählen, steuern, verschieben oder spielen sollen.</span></div>
-    </div>
-  </div>
-</section>
-
 <section class="section how" id="so-gehts">
   <div class="wrap">
     <div class="how-head">
       <div>
-        <div class="kicker">So kommt Touch dazu</div>
-        <h2 class="section-title">Die vorhandene Technik bleibt. Touch kommt dazu.</h2>
+        <div class="kicker">So funktioniert's</div>
+        <h2 class="section-title">Bestehende Technik. Touch dazu.</h2>
       </div>
-      <p class="lead">Touch-Frame ergänzt vorhandene oder neu geplante LED-Wände, Displays, Videowalls und Projektionen um direkte Touch-Eingabe. Das bestehende System muss dafür nicht ersetzt werden.</p>
+      <p class="lead">Wir prüfen das vorhandene oder geplante System, legen Touch-Frame passend aus und stimmen die Anwendung darauf ab.</p>
     </div>
-
     <div class="steps">
       <div class="step">
         <h3>System prüfen</h3>
-        <p>LED-Wand, Display, Videowall oder Projektion: Wir schauen auf Format, Einbausituation und Anwendung.</p>
+        <p>LED-Wand, Display, Videowall oder Projektion: Format, Einbausituation und Einsatz werden geprüft.</p>
       </div>
       <div class="step">
         <h3>Touch-Frame integrieren</h3>
-        <p>Der Rahmen wird passend zu Format und Anwendung geplant und ergänzt das vorhandene System um die <em>Touch-Ebene</em>.</p>
+        <p>Der Rahmen wird passend zu Größe und Aufbau geplant und an das vorhandene System angepasst.</p>
       </div>
       <div class="step">
-        <h3>Inhalt interaktiv machen</h3>
-        <p>Vom einfachen Button bis zum Spiel oder Produktkonfigurator: Die Software bestimmt, was Nutzer damit machen können.</p>
-      </div>
-      <div class="step">
-        <h3>Direkt bedienen</h3>
-        <p>Tippen, wischen, spielen oder auswählen – direkt am Inhalt.</p>
+        <h3>Anwendung abstimmen</h3>
+        <p>Spiel, Produktkonfigurator, Navigation oder Präsentation – der Inhalt bestimmt, wie die Touch-Eingabe genutzt wird.</p>
       </div>
     </div>
   </div>
@@ -813,44 +571,32 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
 
 <section class="pixelgold" id="pixelgold">
   <div class="wrap pixelgold-grid">
-    <div class="pg-visual" aria-label="Touch-Frame zusammen mit einer LED-Wand">
-      <div class="pg-room">
-        <div class="pg-wall">
-          <div class="pg-wall-copy">
-            <strong>LED + TOUCH</strong>
-            <span>LED + Touch · zusammen geplant</span>
-          </div>
-        </div>
-        <div class="pg-touchpoint" aria-hidden="true"></div>
-        <div class="pg-person" aria-hidden="true"></div>
-        <div class="pg-floorline" aria-hidden="true"></div>
-        <div class="pg-badge">TOUCH-FRAME</div>
-        <div class="pg-badge alt">LED BY PIXELGOLD</div>
+    <div class="pg-visual" aria-label="LED und Touch-Frame zusammen geplant">
+      <div class="pg-panel">
+        <span class="pg-mini">PIXELGOLD + TOUCH-FRAME</span>
+        <strong>LED<br>+ TOUCH</strong>
+        <div class="pg-panel-tags"><span>Miete</span><span>Kauf</span><span>Planung</span><span>Aufbau</span></div>
       </div>
     </div>
 
     <div class="pixelgold-copy">
       <div class="kicker">LED-Wand gleich mit dazu?</div>
-      <h2 class="section-title">Touch-Frame für vorhandene Technik – oder direkt mit LED-Wand.</h2>
-      <p class="lead">Wenn noch keine passende LED-Wand da ist, liefern wir sie über Pixelgold direkt mit. LED und Touch-Frame werden zusammen geplant – zur Miete oder zum Kauf.</p>
-
+      <h2 class="section-title">Touch-Frame einzeln oder komplett mit LED-Wand.</h2>
+      <p class="lead">Wenn die passende LED-Wand noch fehlt, kann Pixelgold sie direkt mit planen, liefern und aufbauen – zur Miete oder zum Kauf.</p>
       <div class="pg-options">
         <div class="pg-option">
           <strong>Touch-Frame für vorhandene Technik</strong>
-          <span>Du hast bereits eine LED-Wand, ein Display, eine Videowall oder Projektion. Wir planen die passende Touch-Lösung dazu.</span>
+          <span>Für vorhandene LED-Wände, Displays, Videowalls oder Projektionen.</span>
         </div>
         <div class="pg-option highlight">
           <strong>Komplett mit LED-Wand</strong>
-          <span>Passende LED-Wand und Touch-Frame zusammen geplant – zur Miete oder zum Kauf.</span>
+          <span>LED-Wand und Touch-Frame zusammen geplant, geliefert und aufgebaut.</span>
         </div>
       </div>
-
       <div class="pg-checks">
         <div class="pg-check"><i>✓</i><span>temporär für Messe, Event oder Firmenfeier</span></div>
-        <div class="pg-check"><i>✓</i><span>dauerhaft für Showroom, Ausstellung oder feste Installation</span></div>
-        <div class="pg-check"><i>✓</i><span>Größe und Aufbau passend zur jeweiligen Anwendung</span></div>
+        <div class="pg-check"><i>✓</i><span>dauerhaft für Showroom, Ausstellung oder Installation</span></div>
       </div>
-
       <div class="cross-links">
         <a class="button primary" href="https://pixelgold-visuals.de/" target="_blank" rel="noopener">LED-Wand mit anfragen ↗</a>
         <a class="button secondary" href="#projektcheck">Nur Touch-Frame prüfen</a>
@@ -863,12 +609,12 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
 <section class="section audience">
   <div class="wrap">
     <div class="audience-head">
-      <div class="kicker">Viele Einsatzmöglichkeiten</div>
-      <h2 class="section-title">Was sollen Menschen damit machen?</h2>
-      <p class="lead">Ob Messe, Schule, Showroom, Event oder Ausstellung: Entscheidend ist, welches System eingesetzt wird und was Menschen damit machen sollen.</p>
+      <div class="kicker">Einsatz</div>
+      <h2 class="section-title">Messe, Showroom, Event, Museum, Retail.</h2>
+      <p class="lead">Touch-Frame wird passend zum Format, zum Inhalt und zum jeweiligen Einsatz geplant.</p>
     </div>
     <div class="tags">
-      <span>Messebau</span><span>Agenturen</span><span>Eventtechnik</span><span>Freizeitparks</span><span>Museen</span><span>Schulen</span><span>Unternehmen</span><span>Retail</span><span>Showrooms</span><span>Sportevents</span><span>Produktlaunches</span><span>Firmenfeiern</span><span>Gaming</span><span>Ausstellungen</span><span>Erlebniswelten</span><span>Pop-up Stores</span>
+      <span>Messebau</span><span>Agenturen</span><span>Eventtechnik</span><span>Freizeitparks</span><span>Museen</span><span>Schulen</span><span>Unternehmen</span><span>Retail</span><span>Showrooms</span><span>Sportevents</span><span>Produktlaunches</span><span>Firmenfeiern</span><span>Gaming</span><span>Ausstellungen</span><span>Pop-up Stores</span>
     </div>
   </div>
 </section>
@@ -1057,6 +803,5 @@ if(projectCheck){
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
-<!-- pages-redeploy-no-custom-domain -->
 </body>
 </html>
