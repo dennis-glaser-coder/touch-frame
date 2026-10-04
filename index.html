@@ -13,9 +13,6 @@
 <meta property="og:description" content="Touch-Frame macht LED-Wände, Displays, Videowalls und Projektionen interaktiv.">
 <meta name="theme-color" content="#0a0813">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0a0813;
@@ -35,7 +32,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:88px}
-body{margin:0;background:var(--bg);color:#fff;font-family:"DM Sans",Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:#fff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 button,input,textarea,select{font:inherit}
 button{cursor:pointer}
@@ -48,7 +45,7 @@ img{max-width:100%;display:block}
 /* header */
 header{position:absolute;z-index:50;left:0;right:0;top:0;border-bottom:1px solid rgba(255,255,255,.12)}
 .head{height:84px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.brand{display:flex;align-items:center;gap:13px;font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.03em}
+.brand{display:flex;align-items:center;gap:13px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:700;letter-spacing:-.03em}
 .brand-dot{width:31px;height:31px;border-radius:9px;position:relative;background:linear-gradient(135deg,var(--lime),var(--cyan) 45%,var(--pink));box-shadow:0 0 35px rgba(85,233,255,.25)}
 .brand-dot:after{content:"";position:absolute;inset:9px;border:2px solid #0a0813;border-radius:50%}
 .brand strong{font-size:21px}
@@ -61,7 +58,7 @@ header{position:absolute;z-index:50;left:0;right:0;top:0;border-bottom:1px solid
 
 /* global */
 h1,h2,h3,p{margin-top:0}
-h1,h2,h3{font-family:"Space Grotesk",sans-serif}
+h1,h2,h3{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
 .section{padding:118px 0}
 .kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;font-size:11px;font-weight:700;letter-spacing:.13em;color:#797489;margin-bottom:18px}
 .kicker:before{content:"";width:28px;height:3px;background:linear-gradient(90deg,var(--pink),var(--cyan))}
@@ -102,7 +99,7 @@ h1{font-size:clamp(68px,8.5vw,132px);line-height:.82;letter-spacing:-.07em;margi
 @keyframes spin{to{transform:rotate(360deg)}}
 .touch-stage{position:relative;width:min(650px,100%);aspect-ratio:1.15/1;background:#131021;border:1px solid rgba(255,255,255,.18);border-radius:36px;overflow:hidden;box-shadow:0 40px 110px rgba(0,0,0,.5);isolation:isolate}
 .touch-stage:before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.16);border-radius:25px;pointer-events:none;z-index:5}
-.touch-stage:after{content:"TOUCH ME";position:absolute;right:28px;bottom:22px;font-family:"Space Grotesk";font-size:11px;letter-spacing:.18em;color:#6d687c;z-index:6}
+.touch-stage:after{content:"TOUCH ME";position:absolute;right:28px;bottom:22px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:11px;letter-spacing:.18em;color:#6d687c;z-index:6}
 .demo-screen{position:absolute;inset:28px;background:
   radial-gradient(circle at 26% 22%,rgba(255,92,200,.35),transparent 27%),
   radial-gradient(circle at 74% 72%,rgba(85,233,255,.35),transparent 29%),
@@ -110,7 +107,7 @@ h1{font-size:clamp(68px,8.5vw,132px);line-height:.82;letter-spacing:-.07em;margi
 border-radius:18px;overflow:hidden}
 .demo-screen:before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.16) 1px,transparent 1.5px);background-size:24px 24px;opacity:.55}
 .demo-message{position:absolute;z-index:3;inset:0;display:grid;place-items:center;text-align:center;pointer-events:none}
-.demo-message strong{display:block;font-family:"Space Grotesk";font-size:clamp(38px,4vw,64px);letter-spacing:-.06em;line-height:.9}
+.demo-message strong{display:block;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:clamp(38px,4vw,64px);letter-spacing:-.06em;line-height:.9}
 .demo-message span{display:block;color:#a9a3ba;font-size:13px;margin-top:14px}
 .demo-mode-label{position:absolute;z-index:4;left:24px;top:20px;font-size:10px;font-weight:800;letter-spacing:.16em;color:#7f7991;text-transform:uppercase}
 .demo-toolbar{position:absolute;z-index:9;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:7px;padding:6px;border:1px solid rgba(255,255,255,.14);background:rgba(10,8,19,.72);backdrop-filter:blur(14px);border-radius:999px}
@@ -120,7 +117,7 @@ border-radius:18px;overflow:hidden}
 .demo-counter{position:absolute;z-index:8;right:22px;top:18px;display:flex;align-items:center;gap:7px;color:#817b91;font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
 .demo-counter b{color:#fff;font-size:13px;letter-spacing:0}
 .demo-live{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 5px rgba(216,255,62,.08)}
-.demo-object{position:absolute;z-index:3;width:68px;height:68px;border-radius:50%;transform:translate(-50%,-50%);display:grid;place-items:center;font-family:"Space Grotesk";font-size:11px;font-weight:800;color:#111;animation:popIn .22s ease-out both;box-shadow:0 18px 45px rgba(0,0,0,.26);user-select:none;pointer-events:none}
+.demo-object{position:absolute;z-index:3;width:68px;height:68px;border-radius:50%;transform:translate(-50%,-50%);display:grid;place-items:center;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:11px;font-weight:800;color:#111;animation:popIn .22s ease-out both;box-shadow:0 18px 45px rgba(0,0,0,.26);user-select:none;pointer-events:none}
 .demo-trail{position:absolute;z-index:3;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;animation:trailFade .8s ease-out forwards}
 .demo-control{position:absolute;z-index:3;left:50%;top:52%;width:62%;height:12px;border-radius:999px;background:rgba(255,255,255,.12);transform:translate(-50%,-50%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
 .demo-control:before{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--level,62%);border-radius:inherit;background:linear-gradient(90deg,var(--pink),var(--cyan),var(--lime));transition:width .18s ease}
@@ -140,13 +137,13 @@ border-radius:18px;overflow:hidden}
 .benefit{padding:28px 28px;border-right:1px solid var(--line)}
 .benefit:first-child{padding-left:0}
 .benefit:last-child{border-right:0}
-.benefit strong{display:block;font-family:"Space Grotesk";font-size:17px;margin-bottom:5px}
+.benefit strong{display:block;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:17px;margin-bottom:5px}
 .benefit span{font-size:12px;color:#817c90}
 
 /* moving experience wall */
 .experience-marquee{overflow:hidden;background:#f2effb;color:#101017;border-bottom:1px solid #ddd8ea;border-top:1px solid #ddd8ea}
 .marquee-track{display:flex;width:max-content;gap:34px;align-items:center;padding:19px 0;animation:marquee 24s linear infinite}
-.marquee-track span{font-family:"Space Grotesk";font-size:14px;font-weight:800;letter-spacing:.04em;white-space:nowrap}
+.marquee-track span{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:14px;font-weight:800;letter-spacing:.04em;white-space:nowrap}
 .marquee-track i{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--cyan));display:block;flex:0 0 auto}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
@@ -188,7 +185,7 @@ border-radius:18px;overflow:hidden}
 
 /* Kids */
 .kids .scene-art{background:linear-gradient(145deg,#171126,#11101d)}
-.kids .bubble{position:absolute;border-radius:50%;display:grid;place-items:center;font-family:"Space Grotesk";font-weight:800;color:#111;box-shadow:0 16px 34px rgba(0,0,0,.2)}
+.kids .bubble{position:absolute;border-radius:50%;display:grid;place-items:center;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:800;color:#111;box-shadow:0 16px 34px rgba(0,0,0,.2)}
 .kids .b1{width:86px;height:86px;background:var(--pink);left:13%;top:29%;font-size:15px}
 .kids .b2{width:58px;height:58px;background:var(--cyan);left:48%;top:22%;font-size:11px}
 .kids .b3{width:104px;height:104px;background:var(--lime);right:13%;top:40%;font-size:18px}
@@ -280,7 +277,7 @@ box-shadow:0 28px 65px rgba(0,0,0,.45)}
   linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
 background-size:26px 26px}
 .pg-wall-copy{position:absolute;z-index:3;left:8%;right:8%;top:50%;transform:translateY(-50%);text-align:center}
-.pg-wall-copy strong{display:block;font-family:"Space Grotesk";font-size:clamp(31px,4.2vw,58px);letter-spacing:-.055em;line-height:.9}
+.pg-wall-copy strong{display:block;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:clamp(31px,4.2vw,58px);letter-spacing:-.055em;line-height:.9}
 .pg-wall-copy span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#c0b9c9;margin-top:13px}
 .pg-touchpoint{position:absolute;z-index:4;right:21%;top:39%;width:62px;height:62px;border:2px solid var(--lime);border-radius:50%;box-shadow:0 0 0 11px rgba(216,255,62,.07),0 0 42px rgba(216,255,62,.28)}
 .pg-touchpoint:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--lime);left:50%;top:50%;transform:translate(-50%,-50%)}
@@ -295,7 +292,7 @@ background-size:26px 26px}
 .pixelgold-copy>.lead{color:#aaa3b4;margin:26px 0 34px;max-width:640px}
 .pg-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 30px}
 .pg-option{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035);border-radius:20px;padding:22px}
-.pg-option strong{display:block;font-family:"Space Grotesk";font-size:18px;margin-bottom:6px}
+.pg-option strong{display:block;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:18px;margin-bottom:6px}
 .pg-option span{display:block;color:#878190;font-size:13px;line-height:1.5}
 .pg-option.highlight{border-color:rgba(216,255,62,.28);background:rgba(216,255,62,.055)}
 .pg-option.highlight strong{color:var(--lime)}
@@ -337,7 +334,7 @@ background-size:26px 26px}
 /* footer */
 footer{background:#08070d;color:#fff;padding:40px 0 30px}
 .footer-grid{display:flex;justify-content:space-between;gap:40px;align-items:flex-start}
-.footer-brand strong{font-family:"Space Grotesk";font-size:18px}
+.footer-brand strong{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:18px}
 .footer-brand p{font-size:12px;color:#756f81;margin:8px 0 0}
 .footer-links{display:flex;gap:22px;font-size:12px;color:#918b9c}
 
@@ -677,10 +674,10 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
 
 <footer>
   <div class="wrap footer-grid">
-    <div class="footer-brand"><strong>TOUCHFRAME</strong><p>Bildflächen interaktiv machen · powered by Pixelgold</p></div>
+    <div class="footer-brand"><strong>TOUCHFRAME</strong><p>Bildflächen interaktiv machen · ein Angebot der Emotive Systems GmbH</p></div>
     <div class="footer-links">
-      <a href="https://pixelgold-visuals.de/impressum/" target="_blank" rel="noopener">Impressum</a>
-      <a href="https://pixelgold-visuals.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a>
+      <a href="./impressum.html">Impressum</a>
+      <a href="./datenschutz.html">Datenschutz</a>
       <span>© <span id="year"></span> Touch-Frame</span>
     </div>
   </div>
