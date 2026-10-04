@@ -128,8 +128,6 @@ border-radius:18px;overflow:hidden}
 .cursor-core{position:absolute;z-index:8;width:9px;height:9px;border-radius:50%;background:var(--lime);left:67%;top:28%;transform:translate(-50%,-50%);pointer-events:none}
 .ripple{position:absolute;z-index:4;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;animation:ripple .72s ease-out forwards}
 @keyframes ripple{0%{opacity:1;box-shadow:0 0 0 0 currentColor}100%{opacity:0;box-shadow:0 0 0 80px transparent}}
-.float-chip{position:absolute;z-index:8;padding:10px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.17);background:rgba(15,12,28,.82);backdrop-filter:blur(12px);font-size:12px;color:#d8d4e2}
-.chip-a{left:-18px;top:23%}.chip-b{right:-12px;top:67%}.chip-c{left:9%;bottom:3%}
 
 /* benefit strip */
 .benefit-strip{background:#0e0b18;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -363,8 +361,7 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
  .touch-demo{height:440px}
  .demo-orbit{width:380px;height:380px}
  .touch-stage{border-radius:26px}
- .float-chip{display:none}
- .step{grid-template-columns:1fr}.step p{grid-column:auto}
+  .step{grid-template-columns:1fr}.step p{grid-column:auto}
  .footer-grid{flex-direction:column}
 }
 @media(max-width:560px){
@@ -442,9 +439,6 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
         <div class="cursor-ring" id="cursorRing"></div>
         <div class="cursor-core" id="cursorCore"></div>
       </div>
-      <div class="float-chip chip-a">LED</div>
-      <div class="float-chip chip-b">Projektion</div>
-      <div class="float-chip chip-c">Display · Videowall</div>
     </div>
   </div>
 </section>
