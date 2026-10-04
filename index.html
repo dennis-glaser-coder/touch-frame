@@ -161,23 +161,91 @@ border-radius:18px;overflow:hidden}
 
 /* use cases */
 .playground{background:#0d0a17;position:relative;overflow:hidden}
-.playground:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(139,108,255,.13);filter:blur(110px);right:-200px;top:120px}
+.playground:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:rgba(139,108,255,.12);filter:blur(120px);right:-220px;top:110px}
 .play-head{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end;margin-bottom:58px}
 .play-head p{color:#9993aa;max-width:540px;justify-self:end;margin:0}
-.play-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-.play-card{position:relative;border:1px solid rgba(255,255,255,.12);min-height:290px;border-radius:26px;padding:28px;overflow:hidden;background:#12101d;transition:transform .24s,border-color .24s}
-.play-card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.28)}
-.play-card h3{font-size:31px;letter-spacing:-.04em;margin:0 0 9px;position:relative;z-index:3}
-.play-card p{color:#918ba2;font-size:14px;max-width:310px;position:relative;z-index:3}
-.play-card:after{content:"";position:absolute;border-radius:50%;filter:blur(0);opacity:.72}
-.c1{grid-column:span 5;background:linear-gradient(145deg,#151022,#13111c)}
-.c1:after{width:230px;height:230px;background:radial-gradient(circle,var(--pink),transparent 66%);right:-75px;bottom:-95px}
-.c2{grid-column:span 7;background:linear-gradient(145deg,#111624,#0f101c)}
-.c2:after{width:300px;height:300px;background:radial-gradient(circle,var(--cyan),transparent 68%);right:-110px;bottom:-130px}
-.c3{grid-column:span 4}.c3:after{width:200px;height:200px;background:radial-gradient(circle,var(--lime),transparent 68%);right:-80px;bottom:-95px}
-.c4{grid-column:span 4}.c4:after{width:210px;height:210px;background:radial-gradient(circle,var(--violet),transparent 68%);right:-70px;bottom:-95px}
-.c5{grid-column:span 4}.c5:after{width:200px;height:200px;background:radial-gradient(circle,var(--orange),transparent 68%);right:-75px;bottom:-95px}
-.card-icon{width:54px;height:54px;border-radius:16px;border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;margin-bottom:60px;font-size:25px;position:relative;z-index:2}
+.scene-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.scene-card{position:relative;min-height:390px;border:1px solid rgba(255,255,255,.12);border-radius:28px;overflow:hidden;background:#12101d;isolation:isolate;transition:transform .24s,border-color .24s}
+.scene-card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.27)}
+.scene-card.large{grid-column:span 7}
+.scene-card.medium{grid-column:span 5}
+.scene-card.third{grid-column:span 4}
+.scene-copy{position:absolute;left:28px;right:28px;bottom:27px;z-index:5}
+.scene-copy h3{font-size:30px;line-height:1;letter-spacing:-.04em;margin:0 0 8px}
+.scene-copy p{font-size:14px;color:#a19bad;max-width:430px;margin:0}
+.scene-label{position:absolute;left:26px;top:23px;z-index:6;font-size:10px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:#8d879a}
+.scene-art{position:absolute;inset:0 0 105px;overflow:hidden}
+.scene-screen{position:absolute;border:1px solid rgba(255,255,255,.18);background:#171421;box-shadow:0 28px 70px rgba(0,0,0,.34)}
+.scene-screen:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:25px 25px;pointer-events:none}
+
+/* Messe */
+.trade .scene-art{background:radial-gradient(circle at 68% 35%,rgba(85,233,255,.18),transparent 30%),linear-gradient(150deg,#111421,#15101e)}
+.trade .scene-screen{left:9%;right:9%;top:19%;height:58%;border-radius:20px;background:linear-gradient(135deg,#18162b,#111926)}
+.trade .product-pill{position:absolute;z-index:3;padding:9px 12px;border-radius:999px;background:#fff;color:#111;font-size:10px;font-weight:800}
+.trade .p1{left:15%;top:28%}.trade .p2{left:38%;top:46%;background:var(--cyan)}.trade .p3{right:14%;top:31%;background:var(--pink)}
+.trade .touch-hand{position:absolute;z-index:4;right:24%;top:48%;width:56px;height:56px;border:2px solid var(--lime);border-radius:50%;box-shadow:0 0 0 10px rgba(216,255,62,.07),0 0 36px rgba(216,255,62,.22)}
+.trade .touch-hand:after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--lime);left:50%;top:50%;transform:translate(-50%,-50%)}
+
+/* Kids */
+.kids .scene-art{background:linear-gradient(145deg,#171126,#11101d)}
+.kids .bubble{position:absolute;border-radius:50%;display:grid;place-items:center;font-family:"Space Grotesk";font-weight:800;color:#111;box-shadow:0 16px 34px rgba(0,0,0,.2)}
+.kids .b1{width:86px;height:86px;background:var(--pink);left:13%;top:29%;font-size:15px}
+.kids .b2{width:58px;height:58px;background:var(--cyan);left:48%;top:22%;font-size:11px}
+.kids .b3{width:104px;height:104px;background:var(--lime);right:13%;top:40%;font-size:18px}
+.kids .b4{width:44px;height:44px;background:var(--orange);left:41%;top:58%;font-size:10px}
+.kids .score{position:absolute;right:24px;top:20px;font-size:10px;color:#837d90;text-transform:uppercase;letter-spacing:.12em}
+.kids .score b{font-size:18px;color:#fff;margin-left:7px}
+
+/* Showroom */
+.showroom .scene-art{background:linear-gradient(155deg,#10131c,#171121)}
+.showroom .scene-screen{left:10%;right:10%;top:16%;height:64%;border-radius:18px;background:linear-gradient(145deg,#17182a,#10151d)}
+.showroom .car-shape{position:absolute;z-index:2;width:54%;height:35%;left:23%;top:34%;border-radius:48% 52% 34% 36% / 58% 56% 44% 42%;background:linear-gradient(135deg,var(--violet),#513ed7 56%,#262038);box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.showroom .car-shape:before,.showroom .car-shape:after{content:"";position:absolute;bottom:-8px;width:23px;height:23px;border-radius:50%;background:#0a0813;border:5px solid #2a2633}
+.showroom .car-shape:before{left:13%}.showroom .car-shape:after{right:13%}
+.showroom .swatches{position:absolute;z-index:3;left:17%;bottom:17%;display:flex;gap:8px}
+.showroom .swatches i{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,.55)}
+.showroom .swatches i:nth-child(1){background:var(--violet)}.showroom .swatches i:nth-child(2){background:var(--pink)}.showroom .swatches i:nth-child(3){background:var(--lime)}.showroom .swatches i:nth-child(4){background:var(--cyan)}
+
+/* Firmenfeier */
+.party .scene-art{background:radial-gradient(circle at 50% 45%,rgba(255,92,200,.16),transparent 30%),linear-gradient(145deg,#161020,#10121a)}
+.party .poll{position:absolute;left:12%;right:12%;top:25%;display:grid;gap:11px}
+.party .poll-row{height:42px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.08)}
+.party .poll-row span{position:absolute;left:0;top:0;bottom:0;border-radius:999px}
+.party .poll-row:nth-child(1) span{width:76%;background:linear-gradient(90deg,var(--pink),#bf65ff)}
+.party .poll-row:nth-child(2) span{width:52%;background:linear-gradient(90deg,var(--cyan),#6d8dff)}
+.party .poll-row:nth-child(3) span{width:36%;background:linear-gradient(90deg,var(--lime),#72e596)}
+.party .poll-row b{position:absolute;z-index:2;left:16px;top:50%;transform:translateY(-50%);font-size:10px;color:#fff}
+
+/* Museum */
+.museum .scene-art{background:linear-gradient(145deg,#10141b,#17121c)}
+.museum .map{position:absolute;inset:19% 10% 15%;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:#121822}
+.museum .map:before{content:"";position:absolute;inset:0;background:
+ radial-gradient(circle at 23% 34%,var(--cyan) 0 5px,transparent 6px),
+ radial-gradient(circle at 68% 28%,var(--pink) 0 5px,transparent 6px),
+ radial-gradient(circle at 47% 68%,var(--lime) 0 5px,transparent 6px),
+ linear-gradient(28deg,transparent 47%,rgba(255,255,255,.08) 48% 50%,transparent 51%),
+ linear-gradient(120deg,transparent 47%,rgba(255,255,255,.07) 48% 50%,transparent 51%);
+ opacity:.9}
+.museum .pin{position:absolute;z-index:3;padding:8px 10px;border-radius:10px;background:#fff;color:#111;font-size:9px;font-weight:800}
+.museum .pin.one{left:19%;top:29%}.museum .pin.two{right:13%;top:48%;background:var(--lime)}
+
+/* Quick menu */
+.quickmenu .scene-art{background:linear-gradient(150deg,#131021,#10151c)}
+.quickmenu .menu-stack{position:absolute;left:12%;right:12%;top:18%;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quickmenu .menu-tile{height:70px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);display:flex;align-items:center;padding:0 15px;font-size:11px;font-weight:800;color:#d7d2df}
+.quickmenu .menu-tile:nth-child(2){background:rgba(85,233,255,.13)}
+.quickmenu .menu-tile:nth-child(3){background:rgba(216,255,62,.11)}
+.quickmenu .menu-tile:nth-child(4){background:rgba(255,92,200,.12)}
+
+@media(max-width:980px){
+ .scene-card.large,.scene-card.medium,.scene-card.third{grid-column:span 6}
+}
+@media(max-width:700px){
+ .scene-grid{grid-template-columns:1fr}
+ .scene-card.large,.scene-card.medium,.scene-card.third{grid-column:auto;min-height:360px}
+ .scene-copy{left:22px;right:22px;bottom:22px}
+ .scene-copy h3{font-size:27px}
+}
 
 /* how */
 .how{background:var(--paper);color:var(--ink)}
@@ -253,7 +321,6 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
  .demo-orbit{width:380px;height:380px}
  .touch-stage{border-radius:26px}
  .float-chip{display:none}
- .play-grid{grid-template-columns:1fr}.c1,.c2,.c3,.c4,.c5{grid-column:auto}
  .step{grid-template-columns:1fr}.step p{grid-column:auto}
  .footer-grid{flex-direction:column}
 }
@@ -380,28 +447,78 @@ footer{background:#08070d;color:#fff;padding:40px 0 30px}
       <p class="lead">Die Einsatzmöglichkeiten sind breit. Überall dort, wo Besucher etwas selbst auswählen, ausprobieren oder steuern sollen, kann Touch-Frame interessant werden.</p>
     </div>
 
-    <div class="play-grid">
-      <article class="play-card c1">
-        <div class="card-icon">✦</div>
-        <h3>Messen & Events</h3><p>Produkte zeigen, Konfiguratoren bedienen, Spiele starten oder Inhalte direkt am Stand auswählen.</p>
+    <div class="scene-grid">
+      <article class="scene-card large trade">
+        <div class="scene-label">Messe & Event</div>
+        <div class="scene-art">
+          <div class="scene-screen"></div>
+          <span class="product-pill p1">Produkt A</span>
+          <span class="product-pill p2">Variante wählen</span>
+          <span class="product-pill p3">Mehr erfahren</span>
+          <span class="touch-hand" aria-hidden="true"></span>
+        </div>
+        <div class="scene-copy">
+          <h3>Besucher machen selbst.</h3>
+          <p>Produkte auswählen, Varianten vergleichen, Spiele starten oder Inhalte direkt am Stand bedienen.</p>
+        </div>
       </article>
-      <article class="play-card c2">
-        <div class="card-icon">◉</div>
-        <h3>Kinder & Spiele</h3><p>Große Spielflächen, Quizformate, Lernanwendungen oder einfache Reaktionsspiele.</p>
+
+      <article class="scene-card medium kids">
+        <div class="scene-label">Kinder & Spiele</div>
+        <div class="scene-art">
+          <div class="score">Treffer <b>12</b></div>
+          <div class="bubble b1">TAP</div>
+          <div class="bubble b2">+1</div>
+          <div class="bubble b3">GO!</div>
+          <div class="bubble b4">WOW</div>
+        </div>
+        <div class="scene-copy">
+          <h3>Groß spielen.</h3>
+          <p>Reaktionsspiele, Quiz, Lernanwendungen oder eigene Spielideen auf einer großen Fläche.</p>
+        </div>
       </article>
-      <article class="play-card c3">
-        <div class="card-icon">↗</div>
-        <h3>Showrooms</h3><p>Produkte auswählen, Varianten vergleichen oder Inhalte direkt auf der Präsentationsfläche steuern.</p>
+
+      <article class="scene-card third showroom">
+        <div class="scene-label">Showroom</div>
+        <div class="scene-art">
+          <div class="scene-screen"></div>
+          <div class="car-shape"></div>
+          <div class="swatches"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="scene-copy">
+          <h3>Produkte auswählen.</h3>
+          <p>Varianten, Farben oder Ausstattungen direkt auf der Präsentationsfläche bedienen.</p>
+        </div>
       </article>
-      <article class="play-card c4">
-        <div class="card-icon">◎</div>
-        <h3>Firmenfeiern</h3><p>Spiele, Abstimmungen, Fotowände oder kleine Team-Aktionen auf einer großen Fläche.</p>
+
+      <article class="scene-card third party">
+        <div class="scene-label">Firmenfeier</div>
+        <div class="scene-art">
+          <div class="poll">
+            <div class="poll-row"><span></span><b>Team Blau</b></div>
+            <div class="poll-row"><span></span><b>Team Grün</b></div>
+            <div class="poll-row"><span></span><b>Team Rot</b></div>
+          </div>
+        </div>
+        <div class="scene-copy">
+          <h3>Alle machen mit.</h3>
+          <p>Abstimmungen, Spiele oder kleine Team-Aktionen statt nur einer Leinwand zum Zuschauen.</p>
+        </div>
       </article>
-      <article class="play-card c5">
-        <div class="card-icon">＋</div>
-        <h3>Museen & Ausstellungen</h3><p>Informationen auswählen, Karten bedienen oder Inhalte auf einer großen Fläche zugänglich machen.</p>
+
+      <article class="scene-card third museum">
+        <div class="scene-label">Museum & Ausstellung</div>
+        <div class="scene-art">
+          <div class="map"></div>
+          <span class="pin one">Raum A</span>
+          <span class="pin two">Mehr Infos</span>
+        </div>
+        <div class="scene-copy">
+          <h3>Inhalte selbst entdecken.</h3>
+          <p>Karten, Zeitlinien, Informationen oder Exponate direkt über die große Fläche bedienen.</p>
+        </div>
       </article>
-    </div>
+    </div></div>
   </div>
 </section>
 
